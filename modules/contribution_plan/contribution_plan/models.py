@@ -4,7 +4,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from core import models as core_models, fields
 from core.signals import Signal
-from graphql import ResolveInfo
+from graphql import GraphQLResolveInfo as ResolveInfo
 from contribution_plan.mixins import GenericPlanQuerysetMixin, GenericPlanManager
 
 

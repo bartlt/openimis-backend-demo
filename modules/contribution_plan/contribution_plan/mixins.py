@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.db import models
-from graphql import ResolveInfo
+from graphql import GraphQLResolveInfo as ResolveInfo
 
 from core.models import HistoryModelManager
 

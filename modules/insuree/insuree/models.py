@@ -6,7 +6,7 @@ from core import models as core_models
 from django.conf import settings
 from django.db import models
 from django.db.models import Q
-from graphql import ResolveInfo
+from graphql import GraphQLResolveInfo as ResolveInfo
 from insuree.apps import InsureeConfig
 from location import models as location_models
 from location.models import LocationManager

@@ -259,7 +259,7 @@ class ClaimInputType(OpenIMISMutation.Input):
     restore = graphene.UUID(required=False)
     feedback_available = graphene.Boolean(default=False)
     feedback_status = TinyInt(required=False)
-    feedback = graphene.Field(FeedbackInputType, required=False)
+    feedback = graphene.InputField(FeedbackInputType, required=False)
     care_type = graphene.String(required=False)
     pre_authorization = graphene.Boolean(required=False)
     patient_condition = graphene.String(required=False)
@@ -790,7 +790,7 @@ class DeliverClaimFeedbackMutation(OpenIMISMutation):
 
     class Input(OpenIMISMutation.Input):
         claim_uuid = graphene.String(required=False, read_only=True)
-        feedback = graphene.Field(FeedbackInputType, required=True)
+        feedback = graphene.InputField(FeedbackInputType, required=True)
 
     @classmethod
     def async_mutate(cls, user, **data):

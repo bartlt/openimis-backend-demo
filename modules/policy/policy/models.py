@@ -7,7 +7,7 @@ from django.core.cache import caches
 from django_redis.cache import RedisCache
 from django.conf import settings
 from django.db import models
-from graphql import ResolveInfo
+from graphql import GraphQLResolveInfo as ResolveInfo
 from insuree.models import Family
 from product.models import Product
 from contribution_plan.models import ContributionPlan

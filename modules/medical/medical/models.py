@@ -6,7 +6,7 @@ from django.utils import timezone as django_tz
 from core import models as core_models
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
-from graphql import ResolveInfo
+from graphql import GraphQLResolveInfo as ResolveInfo
 from django.conf import settings
 import core
 from medical.apps import MedicalConfig

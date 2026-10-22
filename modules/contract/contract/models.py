@@ -4,7 +4,7 @@ from core import fields
 from core import models as core_models
 from django.conf import settings
 from django.db import models
-from graphql import ResolveInfo
+from graphql import GraphQLResolveInfo as ResolveInfo
 from insuree.models import Insuree
 from policy.models import Policy
 from policyholder.models import PolicyHolder
