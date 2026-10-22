@@ -38,7 +38,8 @@ rules
 waitress
 wheel
 whitenoise
-django-health-check
+# 4.x drops the health_check.db/cache/storage apps listed in INSTALLED_APPS
+django-health-check~=3.24
 requests~=2.32.4
 apscheduler==3.10.1
 # As from v0.4, Django-apscheduler has a migration that is incompatible with SQL Server
