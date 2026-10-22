@@ -1,7 +1,7 @@
 # API snapshot: "nothing broke for the frontend"
 
 Runs the **same 30 real queries the openIMIS React frontend sends** against two versions of this backend
-(on the same demo database) and shows whether the responses are identical.
+(on the same `test_imis` sample database) and shows whether the responses are identical.
 
 - `snapshot.py`: runs every query in [`queries/`](queries/) in-process through the real Django app
   (Django test `Client` → `/api/graphql`, URL routing, middleware, JWT auth, GraphQL view) and writes one JSON file per query.
@@ -9,16 +9,16 @@ Runs the **same 30 real queries the openIMIS React frontend sends** against two 
   Read-only: the only mutation is the frontend's own `tokenAuth` login.
 - `compare.py`: compares two snapshot folders, prints `N queries, N identical, N different` plus field-by-field and JSON diffs,
   writes a one-page HTML report, and exits `1` if anything differs (`0` if identical).
-- [`baseline/`](baseline/): snapshot of tag `baseline-django42-green` (Django 4.2.30, Graphene 2.1.9) on the `test_imis` demo DB.
+- [`baseline/`](baseline/): snapshot of tag `baseline-django42-green` (Django 4.2.30, Graphene 2.1.9) on the `test_imis` sample database.
 
-## Live demo (about 15 seconds on stage)
+## Usage (about 15 seconds)
 
-One-time prep before the demo: one git worktree **plus its own virtualenv** per version. Two venvs are required because
+One-time setup: one git worktree **plus its own virtualenv** per version. Two venvs are required because
 Graphene 2 and Graphene 3 can't be installed side by side, and the openIMIS modules are editable installs bound to one checkout
 (`snapshot.py` refuses to run if the Python it's launched with loads modules from a different checkout than `--repo`).
 
 ```bash
-# from this repo (on main), with the demo DB running. main is the upgraded code (Django 5.2 / Graphene 3).
+# from this repo (on main), with the database running. main is the upgraded code (Django 5.2 / Graphene 3).
 git fetch origin
 git worktree add --detach ~/oi-before baseline-django42-green
 git worktree add --detach ~/oi-after origin/main
@@ -36,17 +36,17 @@ for d in ~/oi-before ~/oi-after; do (
 
 **Database migration between the two snapshots.** The upgraded code ships one new migration, `axes.0009_add_session_hash`
 (django-axes 7 adds a required `session_hash` column to its login log). Without it the new code can't log in; with it the
-old code can't log in (`null value in column "session_hash"`). Both share one demo DB, so either use the one-snapshot
+old code can't log in (`null value in column "session_hash"`). Both share one database, so either use the one-snapshot
 flow below, or switch the schema around the "before" snapshot:
 `(cd ~/oi-after/openIMIS && ../.venv/bin/python manage.py migrate axes 0008)` before it, and `... manage.py migrate` (~2 s) after it.
 The migration only touches the login-attempt log, not any data the queries read.
 
-On stage, simplest (new code against the committed baseline, DB stays migrated, ~5 s):
+Run, simplest (new code against the committed baseline, database stays migrated, ~5 s):
 
 ```bash
 ~/oi-after/.venv/bin/python tools/api_snapshot/snapshot.py --repo ~/oi-after --out /tmp/after      # new code, ~5 s
 python3 tools/api_snapshot/compare.py tools/api_snapshot/baseline /tmp/after --report /tmp/api-report.html
-xdg-open /tmp/api-report.html   # the slide
+xdg-open /tmp/api-report.html   # open the report
 ```
 
 Or both versions live (~12 s):
@@ -70,13 +70,13 @@ Without worktrees the same commands work from this checkout with its own venv:
 
 Environment variables default to the README/CI values (`DB_NAME=test_imis`, `DB_USER=postgres`, `DB_PASSWORD='YourStrong!Passw0rd'`,
 `SITE_ROOT=api`, `MODE=DEV`, `OPENSEARCH_DSL_AUTOSYNC=False`, ...); anything already exported wins.
-Login defaults to the demo admin `Admin` / `admin123` (`--user`, `--password`). `--verbose` shows the backend's own log output.
+Login defaults to the sample database's admin `Admin` / `admin123` (`--user`, `--password`). `--verbose` shows the backend's own log output.
 
 ## The queries
 
 `queries/NN_name.graphql` holds the query text exactly as the frontend builds it (same projections, filters, ordering
 and page size of 10), with a header naming the screen and the frontend source file/function (`openimis-fe-*_js`, `develop`)
-and, if any, `# Variables: {...}`. Identifiers are fixed demo-DB records so detail pages return real data
+and, if any, `# Variables: {...}`. Identifiers are fixed sample-database records so detail pages return real data
 (insuree `070707070`, claim `CIA00001` with 4 items and 7 services, etc.). `01_core_current_user.rest` is the one REST call:
 the frontend loads the logged-in user and their rights with `GET /api/core/users/current_user/` right after `tokenAuth`.
 
@@ -88,7 +88,7 @@ the frontend loads the logged-in user and their rights with `GET /api/core/users
 | Policies | search list, detail page |
 | Claims | search list (health facility view), detail page with services and items |
 | Contributions | search list, detail page, contributions of a policy |
-| Payments | search list (the demo DB has no payments, so this checks the empty-page shape) |
+| Payments | search list (the sample database has no payments, so this checks the empty-page shape) |
 | Locations | regions, districts of a region, the user's districts |
 | Health facilities | search list, detail page |
 | Products | search list (full product fragment), single product by id |

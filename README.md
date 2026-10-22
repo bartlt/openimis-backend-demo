@@ -1,4 +1,4 @@
-# openIMIS backend: consolidated demo repo
+# openIMIS backend: consolidated repo
 
 This repo combines the openIMIS backend assembly ([openimis/openimis-be_py](https://github.com/openimis/openimis-be_py)) and 20 of its module repos into a single repository. With one repo, a cross-module upgrade becomes one branch, one PR and one CI run. Upstream openIMIS keeps each module in its own repo, so you can't merge changes from here back upstream as they are; you'd have to split them into per-module PRs first.
 
