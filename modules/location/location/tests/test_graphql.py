@@ -24,7 +24,11 @@ from rest_framework import status
 
 # from openIMIS import schema
 
-from core.models.openimis_graphql_test_case import openIMISGraphQLTestCase, BaseTestContext as DummyContext
+from core.models.openimis_graphql_test_case import (
+    openIMISGraphQLTestCase,
+    BaseTestContext as DummyContext,
+    GraphQLTestHeadersMixin,
+)
 
 
 class LocationGQLTestCase(openIMISGraphQLTestCase):
@@ -477,7 +481,7 @@ class LocationGQLTestCase(openIMISGraphQLTestCase):
         # TODO test the newParentUUID
 
 
-class HealthFacilityGQLTestCase(GraphQLTestCase):
+class HealthFacilityGQLTestCase(GraphQLTestHeadersMixin, GraphQLTestCase):
     GRAPHQL_URL = f"/{settings.SITE_ROOT()}graphql"
     # This is required by some version of graphene but is never used. It should be set to the schema but the import
     # is shown as an error in the IDE, so leaving it as True.

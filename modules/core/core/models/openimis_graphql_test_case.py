@@ -118,7 +118,30 @@ class BaseTestContext:
             return self.jwt
 
 
-class openIMISGraphQLTestCase(GraphQLTestCase):
+class GraphQLTestHeadersMixin:
+    """
+    graphene-django 3 forwards ``query(headers=...)`` to Django's test client as
+    ``headers=``, which prefixes every key with ``HTTP_``. openIMIS tests pass WSGI
+    ``META`` keys (``HTTP_AUTHORIZATION``), as graphene-django 2 expected, so strip
+    the prefix to keep sending the same request headers.
+    """
+
+    def query(self, query, operation_name=None, input_data=None, variables=None, headers=None):
+        if headers:
+            headers = {
+                key[len("HTTP_"):] if key.startswith("HTTP_") else key: value
+                for key, value in headers.items()
+            }
+        return super().query(
+            query,
+            operation_name=operation_name,
+            input_data=input_data,
+            variables=variables,
+            headers=headers,
+        )
+
+
+class openIMISGraphQLTestCase(GraphQLTestHeadersMixin, GraphQLTestCase):
     GRAPHQL_URL = f"/{settings.SITE_ROOT()}graphql"
     GRAPHQL_SCHEMA = True
     """
