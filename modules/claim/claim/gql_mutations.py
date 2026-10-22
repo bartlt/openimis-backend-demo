@@ -166,8 +166,8 @@ class ClaimCodeInputType(graphene.String):
     parse_value = coerce_string
 
     @staticmethod
-    def parse_literal(ast):
-        result = graphene.String.parse_literal(ast)
+    def parse_literal(ast, _variables=None):
+        result = graphene.String.parse_literal(ast, _variables)
         assert_string_length(result, ClaimConfig.max_claim_length)
         return result
 
@@ -183,8 +183,8 @@ class ClaimGuaranteeIdInputType(graphene.String):
     parse_value = coerce_string
 
     @staticmethod
-    def parse_literal(ast):
-        result = graphene.String.parse_literal(ast)
+    def parse_literal(ast, _variables=None):
+        result = graphene.String.parse_literal(ast, _variables)
         assert_string_length(result, 50)
         return result
 

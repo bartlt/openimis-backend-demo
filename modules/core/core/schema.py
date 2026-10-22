@@ -136,8 +136,8 @@ class SmallInt(graphene.Int):
     parse_value = coerce_int
 
     @staticmethod
-    def parse_literal(ast):
-        result = graphene.Int.parse_literal(ast)
+    def parse_literal(ast, _variables=None):
+        result = graphene.Int.parse_literal(ast, _variables)
         if result is not None and MIN_SMALLINT <= result <= MAX_SMALLINT:
             return result
         else:
@@ -165,8 +165,8 @@ class TinyInt(graphene.Int):
     parse_value = coerce_int
 
     @staticmethod
-    def parse_literal(ast):
-        result = graphene.Int.parse_literal(ast)
+    def parse_literal(ast, _variables=None):
+        result = graphene.Int.parse_literal(ast, _variables)
         if result is not None and MIN_TINYINT <= result <= MAX_TINYINT:
             return result
         else:
@@ -198,9 +198,9 @@ class ParsedJSONString(graphene.JSONString):
         )
 
     @staticmethod
-    def parse_literal(node):
+    def parse_literal(node, _variables=None):
         return ParsedJSONString.parse_keys(
-            graphene.JSONString.parse_literal(node), to_snake_case
+            graphene.JSONString.parse_literal(node, _variables), to_snake_case
         )
 
     @staticmethod
