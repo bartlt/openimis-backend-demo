@@ -1,0 +1,36 @@
+{
+  "query": "30_medical_item_detail",
+  "screen": "Medical items: item detail page",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "medicalItems": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjA="
+        },
+        "edges": [
+          {
+            "node": {
+              "uuid": "71efb78b-64ee-4a68-be29-87daf566eb20",
+              "code": "0001",
+              "name": "ACETYLSALICYLIC ACID (ASPIRIN)  TABS 300MG",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "10.00",
+              "careType": "O",
+              "frequency": 0,
+              "patientCategory": 15,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "1000 TABLETS"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

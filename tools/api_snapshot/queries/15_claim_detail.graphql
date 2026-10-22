@@ -1,0 +1,40 @@
+# Screen: Claims: claim detail page with services and items
+# Source: openimis-fe-claim_js@develop src/actions.js fetchClaim (not forFeedback: services + items)
+query GetClaim {
+  claim(uuid: "2e5b57f2-d6a0-4aeb-8c55-d58b3f2457c3") {
+    uuid
+    code
+    dateFrom
+    dateTo
+    dateClaimed
+    claimed
+    approved
+    valuated
+    status
+    feedbackStatus
+    reviewStatus
+    guaranteeId
+    explanation
+    adjustment
+    attachmentsCount
+    careType
+    restore {uuid, code}
+    healthFacility{id,uuid,code,name,level,servicesPricelist{id, uuid},itemsPricelist{id, uuid},contractStartDate,contractEndDate,location{id,uuid,code,name,type, parent{id,uuid,code,name,type}}}
+    referFrom{id,uuid,code,name}
+    referTo{id,uuid,code,name}
+    insuree{id,uuid,chfId,lastName,otherNames,dob}
+    visitType
+    admin{id,uuid,code,lastName,otherNames,healthFacility{id, uuid, code, name, level, servicesPricelist{id, uuid}, itemsPricelist{id, uuid}, location{id, uuid, code, name, parent{id, uuid, code, name}}}}
+    icd{id,code,name}
+    icd1{id,code,name}
+    icd2{id,code,name}
+    icd3{id,code,name}
+    icd4{id,code,name}
+    preAuthorization
+    patientCondition
+    referralCode
+    jsonExt
+    services{id, product { id, uuid }, service {id code name price maximumAmount manualPrice packagetype} qtyProvided,  priceAsked, qtyApproved, priceApproved, priceValuated,priceAdjusted, explanation, justification, rejectionReason, status, items{ item { id code name } qtyDisplayed priceAsked qtyProvided } services{ service {id code name} qtyProvided qtyDisplayed priceAsked }}
+    items{id, product { id, uuid }, item {id code name price maximumAmount} qtyProvided, priceAsked, qtyApproved, priceApproved, priceValuated, priceAdjusted, explanation, justification, rejectionReason, status}
+  }
+}

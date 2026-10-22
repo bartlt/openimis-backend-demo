@@ -1,0 +1,22 @@
+{
+  "query": "26_product_detail",
+  "screen": "Products: product picker / header (single product by id)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "product": {
+        "edges": [
+          {
+            "node": {
+              "id": "UHJvZHVjdEdRTFR5cGU6Ng==",
+              "uuid": "e2d028c9-db61-4508-8cfa-252f73dc7fbc",
+              "code": "BCTA0001",
+              "name": "Basic Cover Tahida",
+              "ceilingType": "INSUREE"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

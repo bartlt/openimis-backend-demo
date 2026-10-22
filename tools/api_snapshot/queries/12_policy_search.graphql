@@ -1,0 +1,26 @@
+# Screen: Policies: search list (first page, newest enrolment first)
+# Source: openimis-fe-policy_js@develop src/actions.js fetchPolicySummaries; filters from src/components/PolicySearcher.jsx (defaultOrderBy -enrollDate, page size 10)
+query GetPolicies {
+  policies(first: 10, orderBy: ["-enrollDate"]) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        uuid
+        product{id,code,name,location{id}}
+        officer{id,uuid,code,lastName,otherNames}
+        family{id,uuid,headInsuree{id chfId uuid lastName otherNames},location{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}}}
+        enrollDate
+        effectiveDate
+        startDate
+        expiryDate
+        stage
+        status
+        value
+        sumPremiums
+        validityFrom
+        validityTo
+      }
+    }
+  }
+}

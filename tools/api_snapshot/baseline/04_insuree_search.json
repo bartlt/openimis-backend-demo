@@ -1,0 +1,520 @@
+{
+  "query": "04_insuree_search",
+  "screen": "Insured persons: search list (first page, sorted by insurance number)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "insurees": {
+        "totalCount": 60,
+        "pageInfo": {
+          "hasNextPage": true,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjk="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6NQ==",
+              "uuid": "4d908777-50ff-44c3-81f2-48f27517c798",
+              "validityFrom": "2018-03-27T06:43:32.393000",
+              "validityTo": null,
+              "chfId": "070707055",
+              "otherNames": "Jet",
+              "lastName": "Macintyre",
+              "phone": "",
+              "gender": {
+                "code": "F"
+              },
+              "dob": "2005-10-16",
+              "marital": null,
+              "status": "AC",
+              "family": {
+                "uuid": "822a8e55-2290-4df6-8882-1d702c2ffc8b",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                  "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                  "code": "R1D1M1V1",
+                  "name": "Rachla",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6NA==",
+              "uuid": "d8393487-c3aa-4d3a-b56f-82f9b3b47a46",
+              "validityFrom": "2018-03-27T06:43:48.947000",
+              "validityTo": null,
+              "chfId": "070707066",
+              "otherNames": "Abu",
+              "lastName": "Macintyre",
+              "phone": "",
+              "gender": {
+                "code": "M"
+              },
+              "dob": "1973-11-21",
+              "marital": null,
+              "status": "AC",
+              "family": {
+                "uuid": "822a8e55-2290-4df6-8882-1d702c2ffc8b",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                  "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                  "code": "R1D1M1V1",
+                  "name": "Rachla",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6MQ==",
+              "uuid": "0539afeb-21a1-4b3f-9478-23e6f41b0024",
+              "validityFrom": "2018-03-27T06:43:15.817000",
+              "validityTo": null,
+              "chfId": "070707070",
+              "otherNames": "Joseph",
+              "lastName": "Macintyre",
+              "phone": "",
+              "gender": {
+                "code": "M"
+              },
+              "dob": "1950-07-12",
+              "marital": "M",
+              "status": "AC",
+              "family": {
+                "uuid": "822a8e55-2290-4df6-8882-1d702c2ffc8b",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                  "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                  "code": "R1D1M1V1",
+                  "name": "Rachla",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6Mg==",
+              "uuid": "7b00e6ec-e0f5-4d07-a8e0-ec00a4160e73",
+              "validityFrom": "2018-03-27T06:44:02.833000",
+              "validityTo": null,
+              "chfId": "070707081",
+              "otherNames": "Jane",
+              "lastName": "Macintyre",
+              "phone": "",
+              "gender": {
+                "code": "F"
+              },
+              "dob": "1952-05-07",
+              "marital": "M",
+              "status": "AC",
+              "family": {
+                "uuid": "822a8e55-2290-4df6-8882-1d702c2ffc8b",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                  "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                  "code": "R1D1M1V1",
+                  "name": "Rachla",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6Mw==",
+              "uuid": "f13100e9-9ab3-47b8-8579-150beb56ffad",
+              "validityFrom": "2018-03-27T06:44:14.533000",
+              "validityTo": null,
+              "chfId": "070707092",
+              "otherNames": "Adele",
+              "lastName": "Macintyre",
+              "phone": "",
+              "gender": {
+                "code": "F"
+              },
+              "dob": "1974-06-11",
+              "marital": null,
+              "status": "AC",
+              "family": {
+                "uuid": "822a8e55-2290-4df6-8882-1d702c2ffc8b",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                  "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                  "code": "R1D1M1V1",
+                  "name": "Rachla",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6MTI=",
+              "uuid": "8572a782-2fde-44e7-af10-a5351ebf13bd",
+              "validityFrom": "2018-03-27T07:24:31.400000",
+              "validityTo": null,
+              "chfId": "100000001",
+              "otherNames": "James",
+              "lastName": "Yellow",
+              "phone": "",
+              "gender": {
+                "code": "M"
+              },
+              "dob": "1980-01-13",
+              "marital": "M",
+              "status": "AC",
+              "family": {
+                "uuid": "f6a0b402-0dc0-436e-a7bb-ec65dd4f011f",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYw",
+                  "uuid": "d7c17b9f-c508-4b92-b308-4c3727a5ada0",
+                  "code": "R1D2M1V2",
+                  "name": "Octo",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU3",
+                    "uuid": "4cf9a26d-6cb9-48cc-b42b-55ef61a9d0f2",
+                    "code": "R1D2M1",
+                    "name": "Actoloby",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                      "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                      "code": "R1D2",
+                      "name": "Jambero",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6MTU=",
+              "uuid": "8f6598a8-a383-48d1-bcfa-539ebc211420",
+              "validityFrom": "2018-03-27T07:24:48.457000",
+              "validityTo": null,
+              "chfId": "100000002",
+              "otherNames": "Uij",
+              "lastName": "Yellow",
+              "phone": "",
+              "gender": {
+                "code": "F"
+              },
+              "dob": "1980-05-20",
+              "marital": null,
+              "status": "AC",
+              "family": {
+                "uuid": "f6a0b402-0dc0-436e-a7bb-ec65dd4f011f",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYw",
+                  "uuid": "d7c17b9f-c508-4b92-b308-4c3727a5ada0",
+                  "code": "R1D2M1V2",
+                  "name": "Octo",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU3",
+                    "uuid": "4cf9a26d-6cb9-48cc-b42b-55ef61a9d0f2",
+                    "code": "R1D2M1",
+                    "name": "Actoloby",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                      "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                      "code": "R1D2",
+                      "name": "Jambero",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6MTY=",
+              "uuid": "51e882fd-8e01-475e-b332-01f03151a201",
+              "validityFrom": "2018-03-27T07:25:02.030000",
+              "validityTo": null,
+              "chfId": "100000003",
+              "otherNames": "Jomi",
+              "lastName": "Yellow",
+              "phone": "",
+              "gender": {
+                "code": "F"
+              },
+              "dob": "1966-08-07",
+              "marital": null,
+              "status": "AC",
+              "family": {
+                "uuid": "f6a0b402-0dc0-436e-a7bb-ec65dd4f011f",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYw",
+                  "uuid": "d7c17b9f-c508-4b92-b308-4c3727a5ada0",
+                  "code": "R1D2M1V2",
+                  "name": "Octo",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU3",
+                    "uuid": "4cf9a26d-6cb9-48cc-b42b-55ef61a9d0f2",
+                    "code": "R1D2M1",
+                    "name": "Actoloby",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                      "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                      "code": "R1D2",
+                      "name": "Jambero",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6MzQ=",
+              "uuid": "4f5d3bb7-45d1-48ee-97a9-b49646f1f2a6",
+              "validityFrom": "2018-03-27T07:51:31.520000",
+              "validityTo": null,
+              "chfId": "101000001",
+              "otherNames": "Agen",
+              "lastName": "Listy",
+              "phone": "",
+              "gender": {
+                "code": "M"
+              },
+              "dob": "1974-10-17",
+              "marital": null,
+              "status": "AC",
+              "family": {
+                "uuid": "ca70b30c-be24-4083-95f6-5794a838188c",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYz",
+                  "uuid": "f28d1e17-92ea-4db4-b26b-88ca429731b5",
+                  "code": "R1D1M3V1",
+                  "name": "Rathula",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjQ3",
+                    "uuid": "522c4c5e-10f1-4f6a-98ef-1ae75a259eb5",
+                    "code": "R1D1M3",
+                    "name": "Adhi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          },
+          {
+            "node": {
+              "id": "SW5zdXJlZUdRTFR5cGU6Mzg=",
+              "uuid": "73ec60e9-269a-4846-b26c-144f8e9f55cc",
+              "validityFrom": "2018-03-27T07:51:38.510000",
+              "validityTo": null,
+              "chfId": "101000002",
+              "otherNames": "Baigan",
+              "lastName": "Listy",
+              "phone": "",
+              "gender": {
+                "code": "M"
+              },
+              "dob": "1979-07-08",
+              "marital": null,
+              "status": "AC",
+              "family": {
+                "uuid": "ca70b30c-be24-4083-95f6-5794a838188c",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYz",
+                  "uuid": "f28d1e17-92ea-4db4-b26b-88ca429731b5",
+                  "code": "R1D1M3V1",
+                  "name": "Rathula",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjQ3",
+                    "uuid": "522c4c5e-10f1-4f6a-98ef-1ae75a259eb5",
+                    "code": "R1D1M3",
+                    "name": "Adhi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "currentVillage": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

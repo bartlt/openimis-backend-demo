@@ -1,0 +1,42 @@
+{
+  "query": "07_insuree_policies",
+  "screen": "Insuree enquiry: policies of the insuree",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "policiesByInsuree": {
+        "totalCount": 1,
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjA="
+        },
+        "edges": [
+          {
+            "node": {
+              "policyUuid": "a3df066b-3e23-429a-92ad-cd1ef46daa2f",
+              "productCode": "BCUL0001",
+              "productName": "Basic Cover Ultha",
+              "officerCode": "E00005",
+              "officerName": "sri sid",
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "status": 2,
+              "policyValue": 10000.0,
+              "balance": 10000.0,
+              "ded": null,
+              "dedInPatient": null,
+              "dedOutPatient": null,
+              "ceiling": null,
+              "ceilingInPatient": 0.0,
+              "ceilingOutPatient": 0.0
+            }
+          }
+        ]
+      }
+    }
+  }
+}

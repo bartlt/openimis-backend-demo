@@ -1,0 +1,1148 @@
+{
+  "query": "02_core_modules_permissions",
+  "screen": "Login / permissions: module permission catalogue loaded at start-up",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "modulesPermissions": {
+        "modulePermsList": [
+          {
+            "moduleName": "core",
+            "permissions": [
+              {
+                "permsName": "gql_query_users_perms",
+                "permsValue": 121701
+              },
+              {
+                "permsName": "gql_query_users_profile_perms",
+                "permsValue": 122000
+              },
+              {
+                "permsName": "gql_mutation_create_users_perms",
+                "permsValue": 121702
+              },
+              {
+                "permsName": "gql_mutation_update_users_perms",
+                "permsValue": 121703
+              },
+              {
+                "permsName": "gql_mutation_delete_users_perms",
+                "permsValue": 121704
+              },
+              {
+                "permsName": "gql_query_roles_perms",
+                "permsValue": 122001
+              },
+              {
+                "permsName": "gql_mutation_create_roles_perms",
+                "permsValue": 122002
+              },
+              {
+                "permsName": "gql_mutation_update_roles_perms",
+                "permsValue": 122003
+              },
+              {
+                "permsName": "gql_mutation_replace_roles_perms",
+                "permsValue": 122006
+              },
+              {
+                "permsName": "gql_mutation_duplicate_roles_perms",
+                "permsValue": 122005
+              },
+              {
+                "permsName": "gql_mutation_delete_roles_perms",
+                "permsValue": 122004
+              },
+              {
+                "permsName": "gql_query_enrolment_officers_perms",
+                "permsValue": 121501
+              },
+              {
+                "permsName": "gql_mutation_create_enrolment_officers_perms",
+                "permsValue": 121502
+              },
+              {
+                "permsName": "gql_mutation_update_enrolment_officers_perms",
+                "permsValue": 121503
+              },
+              {
+                "permsName": "gql_mutation_delete_enrolment_officers_perms",
+                "permsValue": 121504
+              },
+              {
+                "permsName": "gql_query_claim_administrator_perms",
+                "permsValue": 121601
+              },
+              {
+                "permsName": "gql_mutation_create_claim_administrator_perms",
+                "permsValue": 121602
+              },
+              {
+                "permsName": "gql_mutation_update_claim_administrator_perms",
+                "permsValue": 121603
+              },
+              {
+                "permsName": "gql_mutation_delete_claim_administrator_perms",
+                "permsValue": 121604
+              },
+              {
+                "permsName": "gql_query_enable_viewing_masked_data_perms",
+                "permsValue": 900101
+              }
+            ]
+          },
+          {
+            "moduleName": "report",
+            "permissions": [
+              {
+                "permsName": "gql_query_report_perms",
+                "permsValue": 131200
+              },
+              {
+                "permsName": "gql_reports_primary_operational_indicator_policies_perms",
+                "permsValue": 131201
+              },
+              {
+                "permsName": "gql_reports_primary_operational_indicators_claims_perms",
+                "permsValue": 131202
+              },
+              {
+                "permsName": "gql_reports_derived_operational_indicators_perms",
+                "permsValue": 131203
+              },
+              {
+                "permsName": "gql_reports_contribution_collection_perms",
+                "permsValue": 131204
+              },
+              {
+                "permsName": "gql_reports_product_sales_perms",
+                "permsValue": 131205
+              },
+              {
+                "permsName": "gql_reports_contribution_distribution_perms",
+                "permsValue": 131206
+              },
+              {
+                "permsName": "gql_reports_user_activity_perms",
+                "permsValue": 131207
+              },
+              {
+                "permsName": "gql_reports_enrolment_performance_indicators_perms",
+                "permsValue": 131208
+              },
+              {
+                "permsName": "gql_reports_status_of_register_perms",
+                "permsValue": 131209
+              },
+              {
+                "permsName": "gql_reports_insuree_without_photos_perms",
+                "permsValue": 131210
+              },
+              {
+                "permsName": "gql_reports_payment_category_overview_perms",
+                "permsValue": 131211
+              },
+              {
+                "permsName": "gql_reports_matching_funds_perms",
+                "permsValue": 131212
+              },
+              {
+                "permsName": "gql_reports_claim_overview_report_perms",
+                "permsValue": 131213
+              },
+              {
+                "permsName": "gql_reports_percentage_referrals_perms",
+                "permsValue": 131214
+              },
+              {
+                "permsName": "gql_reports_families_insurees_overview_perms",
+                "permsValue": 131215
+              },
+              {
+                "permsName": "gql_reports_pending_insurees_perms",
+                "permsValue": 131216
+              },
+              {
+                "permsName": "gql_reports_renewals_perms",
+                "permsValue": 131217
+              },
+              {
+                "permsName": "gql_reports_capitation_payment_perms",
+                "permsValue": 131218
+              },
+              {
+                "permsName": "gql_reports_rejected_photo_perms",
+                "permsValue": 131219
+              },
+              {
+                "permsName": "gql_reports_contribution_payment_perms",
+                "permsValue": 131220
+              },
+              {
+                "permsName": "gql_reports_control_number_assignment_perms",
+                "permsValue": 131221
+              },
+              {
+                "permsName": "gql_reports_overview_of_commissions_perms",
+                "permsValue": 131222
+              },
+              {
+                "permsName": "gql_reports_claim_history_report_perms",
+                "permsValue": 131223
+              },
+              {
+                "permsName": "gql_mutation_report_add_perms",
+                "permsValue": 131224
+              },
+              {
+                "permsName": "gql_mutation_report_edit_perms",
+                "permsValue": 131225
+              },
+              {
+                "permsName": "gql_mutation_report_delete_perms",
+                "permsValue": 131226
+              }
+            ]
+          },
+          {
+            "moduleName": "location",
+            "permissions": [
+              {
+                "permsName": "gql_query_locations_perms",
+                "permsValue": 121901
+              },
+              {
+                "permsName": "gql_query_health_facilities_perms",
+                "permsValue": 121101
+              },
+              {
+                "permsName": "gql_mutation_create_locations_perms",
+                "permsValue": 121902
+              },
+              {
+                "permsName": "gql_mutation_edit_locations_perms",
+                "permsValue": 121903
+              },
+              {
+                "permsName": "gql_mutation_delete_locations_perms",
+                "permsValue": 121904
+              },
+              {
+                "permsName": "gql_mutation_move_location_perms",
+                "permsValue": 121905
+              },
+              {
+                "permsName": "gql_mutation_create_region_locations_perms",
+                "permsValue": 121906
+              },
+              {
+                "permsName": "gql_mutation_create_health_facilities_perms",
+                "permsValue": 121102
+              },
+              {
+                "permsName": "gql_mutation_edit_health_facilities_perms",
+                "permsValue": 121103
+              },
+              {
+                "permsName": "gql_mutation_delete_health_facilities_perms",
+                "permsValue": 121104
+              }
+            ]
+          },
+          {
+            "moduleName": "medical",
+            "permissions": [
+              {
+                "permsName": "gql_query_medical_items_perms",
+                "permsValue": 122101
+              },
+              {
+                "permsName": "gql_query_medical_services_perms",
+                "permsValue": 121401
+              },
+              {
+                "permsName": "gql_mutation_medical_items_add_perms",
+                "permsValue": 122102
+              },
+              {
+                "permsName": "gql_mutation_medical_items_update_perms",
+                "permsValue": 122103
+              },
+              {
+                "permsName": "gql_mutation_medical_items_delete_perms",
+                "permsValue": 122104
+              },
+              {
+                "permsName": "gql_mutation_medical_services_add_perms",
+                "permsValue": 121402
+              },
+              {
+                "permsName": "gql_mutation_medical_services_update_perms",
+                "permsValue": 121403
+              },
+              {
+                "permsName": "gql_mutation_medical_services_delete_perms",
+                "permsValue": 121404
+              }
+            ]
+          },
+          {
+            "moduleName": "tools",
+            "permissions": [
+              {
+                "permsName": "registers_perms",
+                "permsValue": 131000
+              },
+              {
+                "permsName": "registers_perms",
+                "permsValue": 131100
+              },
+              {
+                "permsName": "registers_diagnoses_perms",
+                "permsValue": 131000
+              },
+              {
+                "permsName": "registers_diagnoses_perms",
+                "permsValue": 131002
+              },
+              {
+                "permsName": "registers_diagnoses_perms",
+                "permsValue": 131001
+              },
+              {
+                "permsName": "registers_health_facilities_perms",
+                "permsValue": 131000
+              },
+              {
+                "permsName": "registers_health_facilities_perms",
+                "permsValue": 131004
+              },
+              {
+                "permsName": "registers_health_facilities_perms",
+                "permsValue": 131003
+              },
+              {
+                "permsName": "registers_locations_perms",
+                "permsValue": 131000
+              },
+              {
+                "permsName": "registers_locations_perms",
+                "permsValue": 131006
+              },
+              {
+                "permsName": "registers_locations_perms",
+                "permsValue": 131005
+              },
+              {
+                "permsName": "registers_items_perms",
+                "permsValue": 131000
+              },
+              {
+                "permsName": "registers_items_perms",
+                "permsValue": 131008
+              },
+              {
+                "permsName": "registers_items_perms",
+                "permsValue": 131007
+              },
+              {
+                "permsName": "registers_services_perms",
+                "permsValue": 131000
+              },
+              {
+                "permsName": "registers_services_perms",
+                "permsValue": 131010
+              },
+              {
+                "permsName": "registers_services_perms",
+                "permsValue": 131009
+              },
+              {
+                "permsName": "extracts_master_data_perms",
+                "permsValue": 131101
+              },
+              {
+                "permsName": "extracts_officer_feedbacks_perms",
+                "permsValue": 131106
+              },
+              {
+                "permsName": "extracts_officer_renewals_perms",
+                "permsValue": 131105
+              },
+              {
+                "permsName": "extracts_phone_extract_perms",
+                "permsValue": 131102
+              },
+              {
+                "permsName": "extracts_phone_extract_perms",
+                "permsValue": 131103
+              },
+              {
+                "permsName": "extracts_upload_claims_perms",
+                "permsValue": 131104
+              }
+            ]
+          },
+          {
+            "moduleName": "calculation",
+            "permissions": [
+              {
+                "permsName": "gql_query_calculation_rule_perms",
+                "permsValue": 153001
+              },
+              {
+                "permsName": "gql_mutation_update_calculation_rule_perms",
+                "permsValue": 153003
+              }
+            ]
+          },
+          {
+            "moduleName": "invoice",
+            "permissions": [
+              {
+                "permsName": "gql_invoice_search_perms",
+                "permsValue": 155101
+              },
+              {
+                "permsName": "gql_invoice_create_perms",
+                "permsValue": 155102
+              },
+              {
+                "permsName": "gql_invoice_update_perms",
+                "permsValue": 155103
+              },
+              {
+                "permsName": "gql_invoice_delete_perms",
+                "permsValue": 155104
+              },
+              {
+                "permsName": "gql_invoice_amend_perms",
+                "permsValue": 155109
+              },
+              {
+                "permsName": "gql_invoice_payment_search_perms",
+                "permsValue": 155201
+              },
+              {
+                "permsName": "gql_invoice_payment_create_perms",
+                "permsValue": 155202
+              },
+              {
+                "permsName": "gql_invoice_payment_update_perms",
+                "permsValue": 155203
+              },
+              {
+                "permsName": "gql_invoice_payment_delete_perms",
+                "permsValue": 155204
+              },
+              {
+                "permsName": "gql_invoice_payment_refund_perms",
+                "permsValue": 155206
+              },
+              {
+                "permsName": "gql_invoice_event_search_perms",
+                "permsValue": 155301
+              },
+              {
+                "permsName": "gql_invoice_event_create_perms",
+                "permsValue": 155302
+              },
+              {
+                "permsName": "gql_invoice_event_update_perms",
+                "permsValue": 155303
+              },
+              {
+                "permsName": "gql_invoice_event_delete_perms",
+                "permsValue": 155304
+              },
+              {
+                "permsName": "gql_invoice_event_create_message_perms",
+                "permsValue": 155306
+              },
+              {
+                "permsName": "gql_invoice_event_delete_my_message_perms",
+                "permsValue": 155307
+              },
+              {
+                "permsName": "gql_invoice_event_delete_all_message_perms",
+                "permsValue": 155308
+              },
+              {
+                "permsName": "gql_bill_search_perms",
+                "permsValue": 156101
+              },
+              {
+                "permsName": "gql_bill_create_perms",
+                "permsValue": 156102
+              },
+              {
+                "permsName": "gql_bill_update_perms",
+                "permsValue": 156103
+              },
+              {
+                "permsName": "gql_bill_delete_perms",
+                "permsValue": 156104
+              },
+              {
+                "permsName": "gql_bill_amend_perms",
+                "permsValue": 156109
+              },
+              {
+                "permsName": "gql_bill_payment_search_perms",
+                "permsValue": 156201
+              },
+              {
+                "permsName": "gql_bill_payment_create_perms",
+                "permsValue": 156202
+              },
+              {
+                "permsName": "gql_bill_payment_update_perms",
+                "permsValue": 156203
+              },
+              {
+                "permsName": "gql_bill_payment_delete_perms",
+                "permsValue": 156204
+              },
+              {
+                "permsName": "gql_bill_payment_refund_perms",
+                "permsValue": 156206
+              },
+              {
+                "permsName": "gql_bill_event_search_perms",
+                "permsValue": 156301
+              },
+              {
+                "permsName": "gql_bill_event_create_perms",
+                "permsValue": 156302
+              },
+              {
+                "permsName": "gql_bill_event_update_perms",
+                "permsValue": 156303
+              },
+              {
+                "permsName": "gql_bill_event_delete_perms",
+                "permsValue": 156304
+              },
+              {
+                "permsName": "gql_bill_event_create_message_perms",
+                "permsValue": 156306
+              },
+              {
+                "permsName": "gql_bill_event_delete_my_message_perms",
+                "permsValue": 156307
+              },
+              {
+                "permsName": "gql_bill_event_delete_all_message_perms",
+                "permsValue": 156308
+              }
+            ]
+          },
+          {
+            "moduleName": "medical_pricelist",
+            "permissions": [
+              {
+                "permsName": "gql_query_pricelists_medical_items_perms",
+                "permsValue": 121301
+              },
+              {
+                "permsName": "gql_mutation_pricelists_medical_items_add_perms",
+                "permsValue": 121302
+              },
+              {
+                "permsName": "gql_mutation_pricelists_medical_items_update_perms",
+                "permsValue": 121303
+              },
+              {
+                "permsName": "gql_mutation_pricelists_medical_items_delete_perms",
+                "permsValue": 121304
+              },
+              {
+                "permsName": "gql_mutation_pricelists_medical_items_duplicate_perms",
+                "permsValue": 121305
+              },
+              {
+                "permsName": "gql_query_pricelists_medical_services_perms",
+                "permsValue": 121201
+              },
+              {
+                "permsName": "gql_mutation_pricelists_medical_services_add_perms",
+                "permsValue": 121202
+              },
+              {
+                "permsName": "gql_mutation_pricelists_medical_services_update_perms",
+                "permsValue": 121203
+              },
+              {
+                "permsName": "gql_mutation_pricelists_medical_services_delete_perms",
+                "permsValue": 121204
+              },
+              {
+                "permsName": "gql_mutation_pricelists_medical_services_duplicate_perms",
+                "permsValue": 121205
+              }
+            ]
+          },
+          {
+            "moduleName": "product",
+            "permissions": [
+              {
+                "permsName": "gql_query_products_perms",
+                "permsValue": 121001
+              },
+              {
+                "permsName": "gql_mutation_products_add_perms",
+                "permsValue": 121002
+              },
+              {
+                "permsName": "gql_mutation_products_edit_perms",
+                "permsValue": 121003
+              },
+              {
+                "permsName": "gql_mutation_products_delete_perms",
+                "permsValue": 121004
+              },
+              {
+                "permsName": "gql_mutation_products_duplicate_perms",
+                "permsValue": 121005
+              }
+            ]
+          },
+          {
+            "moduleName": "insuree",
+            "permissions": [
+              {
+                "permsName": "gql_query_insurees_perms",
+                "permsValue": 101101
+              },
+              {
+                "permsName": "gql_query_insuree_perms",
+                "permsValue": 101101
+              },
+              {
+                "permsName": "gql_query_insuree_photo_perms",
+                "permsValue": 101101
+              },
+              {
+                "permsName": "gql_query_families_perms",
+                "permsValue": 101001
+              },
+              {
+                "permsName": "gql_query_insuree_policy_perms",
+                "permsValue": 101500
+              },
+              {
+                "permsName": "gql_query_insuree_inquire_perms",
+                "permsValue": 101105
+              },
+              {
+                "permsName": "gql_mutation_create_families_perms",
+                "permsValue": 101002
+              },
+              {
+                "permsName": "gql_mutation_update_families_perms",
+                "permsValue": 101003
+              },
+              {
+                "permsName": "gql_mutation_delete_families_perms",
+                "permsValue": 101004
+              },
+              {
+                "permsName": "gql_mutation_create_insurees_perms",
+                "permsValue": 101102
+              },
+              {
+                "permsName": "gql_mutation_update_insurees_perms",
+                "permsValue": 101103
+              },
+              {
+                "permsName": "gql_mutation_delete_insurees_perms",
+                "permsValue": 101104
+              }
+            ]
+          },
+          {
+            "moduleName": "contribution_plan",
+            "permissions": [
+              {
+                "permsName": "gql_query_contributionplanbundle_perms",
+                "permsValue": 151101
+              },
+              {
+                "permsName": "gql_query_contributionplan_perms",
+                "permsValue": 151201
+              },
+              {
+                "permsName": "gql_query_paymentplan_perms",
+                "permsValue": 157101
+              },
+              {
+                "permsName": "gql_mutation_create_contributionplanbundle_perms",
+                "permsValue": 151102
+              },
+              {
+                "permsName": "gql_mutation_update_contributionplanbundle_perms",
+                "permsValue": 151103
+              },
+              {
+                "permsName": "gql_mutation_delete_contributionplanbundle_perms",
+                "permsValue": 151104
+              },
+              {
+                "permsName": "gql_mutation_replace_contributionplanbundle_perms",
+                "permsValue": 151106
+              },
+              {
+                "permsName": "gql_mutation_create_contributionplan_perms",
+                "permsValue": 151202
+              },
+              {
+                "permsName": "gql_mutation_update_contributionplan_perms",
+                "permsValue": 151203
+              },
+              {
+                "permsName": "gql_mutation_delete_contributionplan_perms",
+                "permsValue": 151204
+              },
+              {
+                "permsName": "gql_mutation_replace_contributionplan_perms",
+                "permsValue": 151206
+              },
+              {
+                "permsName": "gql_mutation_create_paymentplan_perms",
+                "permsValue": 157102
+              },
+              {
+                "permsName": "gql_mutation_update_paymentplan_perms",
+                "permsValue": 157103
+              },
+              {
+                "permsName": "gql_mutation_delete_paymentplan_perms",
+                "permsValue": 157104
+              },
+              {
+                "permsName": "gql_mutation_replace_paymentplan_perms",
+                "permsValue": 157106
+              }
+            ]
+          },
+          {
+            "moduleName": "claim_batch",
+            "permissions": [
+              {
+                "permsName": "gql_query_batch_runs_perms",
+                "permsValue": 111102
+              },
+              {
+                "permsName": "gql_mutation_process_batch_perms",
+                "permsValue": 111101
+              },
+              {
+                "permsName": "reports_capitation_payment_perms",
+                "permsValue": 131218
+              },
+              {
+                "permsName": "account_preview_perms",
+                "permsValue": 111103
+              }
+            ]
+          },
+          {
+            "moduleName": "policy",
+            "permissions": [
+              {
+                "permsName": "gql_query_policies_perms",
+                "permsValue": 101201
+              },
+              {
+                "permsName": "gql_query_policies_by_insuree_perms",
+                "permsValue": 101201
+              },
+              {
+                "permsName": "gql_query_policies_by_family_perms",
+                "permsValue": 101201
+              },
+              {
+                "permsName": "gql_query_eligibilities_perms",
+                "permsValue": 101201
+              },
+              {
+                "permsName": "gql_mutation_create_policies_perms",
+                "permsValue": 101202
+              },
+              {
+                "permsName": "gql_mutation_renew_policies_perms",
+                "permsValue": 101205
+              },
+              {
+                "permsName": "gql_mutation_edit_policies_perms",
+                "permsValue": 101203
+              },
+              {
+                "permsName": "gql_mutation_suspend_policies_perms",
+                "permsValue": 101203
+              },
+              {
+                "permsName": "gql_mutation_delete_policies_perms",
+                "permsValue": 101204
+              }
+            ]
+          },
+          {
+            "moduleName": "payer",
+            "permissions": [
+              {
+                "permsName": "gql_query_payers_perms",
+                "permsValue": 121801
+              },
+              {
+                "permsName": "gql_mutation_payer_add_perms",
+                "permsValue": 121802
+              },
+              {
+                "permsName": "gql_mutation_payer_update_perms",
+                "permsValue": 122103
+              },
+              {
+                "permsName": "gql_mutation_payer_delete_perms",
+                "permsValue": 121804
+              }
+            ]
+          },
+          {
+            "moduleName": "claim",
+            "permissions": [
+              {
+                "permsName": "gql_query_claims_perms",
+                "permsValue": 111001
+              },
+              {
+                "permsName": "gql_mutation_create_claims_perms",
+                "permsValue": 111002
+              },
+              {
+                "permsName": "gql_mutation_update_claims_perms",
+                "permsValue": 111010
+              },
+              {
+                "permsName": "gql_mutation_load_claims_perms",
+                "permsValue": 111005
+              },
+              {
+                "permsName": "gql_mutation_submit_claims_perms",
+                "permsValue": 111007
+              },
+              {
+                "permsName": "gql_mutation_select_claim_feedback_perms",
+                "permsValue": 111010
+              },
+              {
+                "permsName": "gql_mutation_bypass_claim_feedback_perms",
+                "permsValue": 111010
+              },
+              {
+                "permsName": "gql_mutation_skip_claim_feedback_perms",
+                "permsValue": 111010
+              },
+              {
+                "permsName": "gql_mutation_deliver_claim_feedback_perms",
+                "permsValue": 111009
+              },
+              {
+                "permsName": "gql_mutation_select_claim_review_perms",
+                "permsValue": 111010
+              },
+              {
+                "permsName": "gql_mutation_bypass_claim_review_perms",
+                "permsValue": 111010
+              },
+              {
+                "permsName": "gql_mutation_skip_claim_review_perms",
+                "permsValue": 111010
+              },
+              {
+                "permsName": "gql_mutation_deliver_claim_review_perms",
+                "permsValue": 111008
+              },
+              {
+                "permsName": "gql_mutation_process_claims_perms",
+                "permsValue": 111011
+              },
+              {
+                "permsName": "gql_mutation_restore_claims_perms",
+                "permsValue": 111012
+              },
+              {
+                "permsName": "gql_mutation_delete_claims_perms",
+                "permsValue": 111004
+              },
+              {
+                "permsName": "claim_print_perms",
+                "permsValue": 111006
+              }
+            ]
+          },
+          {
+            "moduleName": "contribution",
+            "permissions": [
+              {
+                "permsName": "gql_query_premiums_perms",
+                "permsValue": 101301
+              },
+              {
+                "permsName": "gql_mutation_create_premiums_perms",
+                "permsValue": 101302
+              },
+              {
+                "permsName": "gql_mutation_update_premiums_perms",
+                "permsValue": 101303
+              },
+              {
+                "permsName": "gql_mutation_delete_premiums_perms",
+                "permsValue": 101304
+              }
+            ]
+          },
+          {
+            "moduleName": "payment",
+            "permissions": [
+              {
+                "permsName": "gql_query_payments_perms",
+                "permsValue": 101401
+              },
+              {
+                "permsName": "gql_mutation_create_payments_perms",
+                "permsValue": 101402
+              },
+              {
+                "permsName": "gql_mutation_update_payments_perms",
+                "permsValue": 101403
+              },
+              {
+                "permsName": "gql_mutation_delete_payments_perms",
+                "permsValue": 101404
+              }
+            ]
+          },
+          {
+            "moduleName": "policyholder",
+            "permissions": [
+              {
+                "permsName": "gql_query_policyholder_perms",
+                "permsValue": 150101
+              },
+              {
+                "permsName": "gql_query_policyholderinsuree_perms",
+                "permsValue": 150201
+              },
+              {
+                "permsName": "gql_query_policyholderuser_perms",
+                "permsValue": 150301
+              },
+              {
+                "permsName": "gql_query_policyholdercontributionplanbundle_perms",
+                "permsValue": 150401
+              },
+              {
+                "permsName": "gql_mutation_create_policyholder_perms",
+                "permsValue": 150102
+              },
+              {
+                "permsName": "gql_mutation_update_policyholder_perms",
+                "permsValue": 150103
+              },
+              {
+                "permsName": "gql_mutation_delete_policyholder_perms",
+                "permsValue": 150104
+              },
+              {
+                "permsName": "gql_mutation_create_policyholderinsuree_perms",
+                "permsValue": 150202
+              },
+              {
+                "permsName": "gql_mutation_update_policyholderinsuree_perms",
+                "permsValue": 150203
+              },
+              {
+                "permsName": "gql_mutation_delete_policyholderinsuree_perms",
+                "permsValue": 150204
+              },
+              {
+                "permsName": "gql_mutation_replace_policyholderinsuree_perms",
+                "permsValue": 150206
+              },
+              {
+                "permsName": "gql_mutation_create_policyholderuser_perms",
+                "permsValue": 150302
+              },
+              {
+                "permsName": "gql_mutation_update_policyholderuser_perms",
+                "permsValue": 150303
+              },
+              {
+                "permsName": "gql_mutation_delete_policyholderuser_perms",
+                "permsValue": 150304
+              },
+              {
+                "permsName": "gql_mutation_replace_policyholderuser_perms",
+                "permsValue": 150306
+              },
+              {
+                "permsName": "gql_mutation_create_policyholdercontributionplan_perms",
+                "permsValue": 150402
+              },
+              {
+                "permsName": "gql_mutation_update_policyholdercontributionplan_perms",
+                "permsValue": 150403
+              },
+              {
+                "permsName": "gql_mutation_delete_policyholdercontributionplan_perms",
+                "permsValue": 150404
+              },
+              {
+                "permsName": "gql_mutation_replace_policyholdercontributionplan_perms",
+                "permsValue": 150406
+              },
+              {
+                "permsName": "gql_query_policyholder_portal_perms",
+                "permsValue": 154001
+              },
+              {
+                "permsName": "gql_query_policyholderinsuree_portal_perms",
+                "permsValue": 154101
+              },
+              {
+                "permsName": "gql_query_policyholdercontributionplanbundle_portal_perms",
+                "permsValue": 154601
+              },
+              {
+                "permsName": "gql_query_policyholderuser_portal_perms",
+                "permsValue": 154401
+              },
+              {
+                "permsName": "gql_query_payment_portal_perms",
+                "permsValue": 154501
+              },
+              {
+                "permsName": "gql_query_insuree_policy_portal_perms",
+                "permsValue": 154901
+              },
+              {
+                "permsName": "gql_mutation_create_policyholderinsuree_portal_perms",
+                "permsValue": 154102
+              },
+              {
+                "permsName": "gql_mutation_update_policyholderinsuree_portal_perms",
+                "permsValue": 154103
+              },
+              {
+                "permsName": "gql_mutation_delete_policyholderinsuree_portal_perms",
+                "permsValue": 154104
+              },
+              {
+                "permsName": "gql_mutation_replace_policyholderinsuree_portal_perms",
+                "permsValue": 154106
+              },
+              {
+                "permsName": "gql_mutation_create_policyholderuser_portal_perms",
+                "permsValue": 154402
+              },
+              {
+                "permsName": "gql_mutation_update_policyholderuser_portal_perms",
+                "permsValue": 154403
+              },
+              {
+                "permsName": "gql_mutation_delete_policyholderuser_portal_perms",
+                "permsValue": 154404
+              },
+              {
+                "permsName": "gql_mutation_replace_policyholderuser_portal_perms",
+                "permsValue": 154406
+              }
+            ]
+          },
+          {
+            "moduleName": "contract",
+            "permissions": [
+              {
+                "permsName": "gql_query_contract_perms",
+                "permsValue": 152101
+              },
+              {
+                "permsName": "gql_mutation_create_contract_perms",
+                "permsValue": 152102
+              },
+              {
+                "permsName": "gql_mutation_update_contract_perms",
+                "permsValue": 152103
+              },
+              {
+                "permsName": "gql_mutation_delete_contract_perms",
+                "permsValue": 152104
+              },
+              {
+                "permsName": "gql_mutation_renew_contract_perms",
+                "permsValue": 152106
+              },
+              {
+                "permsName": "gql_mutation_submit_contract_perms",
+                "permsValue": 152107
+              },
+              {
+                "permsName": "gql_mutation_approve_ask_for_change_contract_perms",
+                "permsValue": 152108
+              },
+              {
+                "permsName": "gql_mutation_amend_contract_perms",
+                "permsValue": 152109
+              },
+              {
+                "permsName": "gql_query_payment_perms",
+                "permsValue": 101401
+              },
+              {
+                "permsName": "gql_mutation_create_payments_perms",
+                "permsValue": 101402
+              },
+              {
+                "permsName": "gql_mutation_update_payments_perms",
+                "permsValue": 101403
+              },
+              {
+                "permsName": "gql_mutation_delete_payments_perms",
+                "permsValue": 101404
+              },
+              {
+                "permsName": "gql_mutation_approve_payments_perms",
+                "permsValue": 101408
+              },
+              {
+                "permsName": "gql_query_contract_policyholder_portal_perms",
+                "permsValue": 154201
+              },
+              {
+                "permsName": "gql_mutation_create_contract_policyholder_portal_perms",
+                "permsValue": 154202
+              },
+              {
+                "permsName": "gql_mutation_update_contract_policyholder_portal_perms",
+                "permsValue": 154203
+              },
+              {
+                "permsName": "gql_mutation_submit_contract_policyholder_portal_perms",
+                "permsValue": 154207
+              },
+              {
+                "permsName": "gql_mutation_amend_contract_policyholder_portal_perms",
+                "permsValue": 154209
+              },
+              {
+                "permsName": "gql_invoice_create_perms",
+                "permsValue": 155102
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

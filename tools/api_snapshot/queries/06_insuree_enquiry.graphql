@@ -1,0 +1,26 @@
+# Screen: Insuree enquiry (header search by insurance number)
+# Source: openimis-fe-insuree_js@develop src/actions.js fetchInsureeEnquiry
+query GetInsurees {
+  insurees(chfId:"070707070", ignoreLocation:true) {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        chfId
+        lastName
+        otherNames
+        dob
+        age
+        validityFrom
+        validityTo
+        gender{code}
+        status
+        family{id,uuid,poverty,confirmationNo,parent{id, uuid},confirmationType{code, isConfirmationNumberRequired},familyType{code},address,validityFrom,validityTo,headInsuree{id,uuid,chfId,lastName,otherNames,dob,age,validityFrom,validityTo,photo{id,uuid,date,folder,filename,officerId,photo},gender{code, gender},education{id},profession{id},marital,cardIssued,currentVillage{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}},currentAddress,typeOfId{code},passport,relationship{id},head,status,statusDate,statusReason{code,insureeStatusReason},email,phone,healthFacility{id,uuid,code,name,level,servicesPricelist{id, uuid},itemsPricelist{id, uuid},contractStartDate,contractEndDate,location{id,uuid,code,name,type, parent{id,uuid,code,name,type}}}},location{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}},clientMutationId}
+        photo{folder,filename,photo}
+        gender{code, gender, altLanguage}
+        healthFacility{id,uuid,code,name,level,servicesPricelist{id, uuid},itemsPricelist{id, uuid},contractStartDate,contractEndDate,location{id,uuid,code,name,type, parent{id,uuid,code,name,type}}}
+      }
+    }
+  }
+}

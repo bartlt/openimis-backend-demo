@@ -1,0 +1,102 @@
+{
+  "query": "10_family_detail",
+  "screen": "Families: family detail page",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "families": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjA="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZTox",
+              "uuid": "822a8e55-2290-4df6-8882-1d702c2ffc8b",
+              "poverty": null,
+              "confirmationNo": "",
+              "parent": null,
+              "confirmationType": null,
+              "familyType": null,
+              "address": "Ranchou road 21",
+              "validityFrom": "2018-03-20T08:24:09.597000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6MQ==",
+                "uuid": "0539afeb-21a1-4b3f-9478-23e6f41b0024",
+                "chfId": "070707070",
+                "lastName": "Macintyre",
+                "otherNames": "Joseph",
+                "dob": "1950-07-12",
+                "age": 76,
+                "validityFrom": "2018-03-27T06:43:15.817000",
+                "validityTo": null,
+                "photo": {
+                  "id": "267",
+                  "uuid": "6a31793f-1fdb-4d6d-a1cd-f6faca9b2a79",
+                  "date": "2018-03-27",
+                  "folder": "Images\\Updated\\",
+                  "filename": "070707070_E00001_20180327_0.0_0.0.jpg",
+                  "officerId": 3,
+                  "photo": null
+                },
+                "gender": {
+                  "code": "M",
+                  "gender": "Male"
+                },
+                "education": null,
+                "profession": null,
+                "marital": "M",
+                "cardIssued": false,
+                "currentVillage": null,
+                "currentAddress": "",
+                "typeOfId": null,
+                "passport": "",
+                "relationship": null,
+                "head": true,
+                "status": "AC",
+                "statusDate": null,
+                "statusReason": null,
+                "email": "",
+                "phone": "",
+                "healthFacility": null
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                "code": "R1D1M1V1",
+                "name": "Rachla",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                  "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                  "code": "R1D1M1",
+                  "name": "Achi",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                    "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                    "code": "R1D1",
+                    "name": "District 1",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                      "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                      "code": "R1",
+                      "name": "Region 1",
+                      "type": "R"
+                    }
+                  }
+                }
+              },
+              "clientMutationId": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

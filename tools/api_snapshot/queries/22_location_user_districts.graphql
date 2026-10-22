@@ -1,0 +1,11 @@
+# Screen: Locations: districts the logged-in user may access
+# Source: openimis-fe-location_js@develop src/actions.js fetchUserDistricts
+query GetUserDistricts {
+  userDistricts {
+    id
+    uuid
+    code
+    name
+    parent{id, uuid, code, name}
+  }
+}

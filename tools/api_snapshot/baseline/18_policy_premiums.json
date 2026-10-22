@@ -1,0 +1,36 @@
+{
+  "query": "18_policy_premiums",
+  "screen": "Policies: contributions paid for a policy",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "premiumsByPolicies": {
+        "totalCount": 1,
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjA="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6MzE=",
+              "uuid": "2829128a-a60a-4f98-9bcd-e39564a328b4",
+              "payDate": "2019-08-20",
+              "payer": {
+                "id": "UGF5ZXJHUUxUeXBlOjE=",
+                "uuid": "23602095-e132-4d4d-ac77-a64508323273",
+                "name": "Coffee Farmers Association"
+              },
+              "amount": "10000.00",
+              "payType": "B",
+              "receipt": "555",
+              "isPhotoFee": false
+            }
+          }
+        ]
+      }
+    }
+  }
+}

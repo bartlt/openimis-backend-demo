@@ -1,0 +1,23 @@
+# Screen: Payments: search list (first page, newest received first)
+# Source: openimis-fe-payment_js@develop src/actions.js fetchPaymentsSummaries; filters from src/components/PaymentSearcher.jsx (defaultOrderBy -receivedDate, page size 10)
+query GetPayments {
+  payments(first: 10, orderBy: ["-receivedDate"]) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        uuid
+        id
+        requestDate
+        expectedAmount
+        receivedDate
+        receivedAmount
+        status
+        receiptNo
+        typeOfPayment
+        clientMutationId
+        validityTo
+      }
+    }
+  }
+}

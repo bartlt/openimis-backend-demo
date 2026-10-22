@@ -1,0 +1,21 @@
+# Screen: Families: family members table
+# Source: openimis-fe-insuree_js@develop src/actions.js fetchFamilyMembers; filter from src/components/FamilyMembersTable.jsx
+query GetFamilyMembers {
+  familyMembers(familyUuid: "822a8e55-2290-4df6-8882-1d702c2ffc8b") {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        uuid
+        chfId
+        otherNames
+        lastName
+        head
+        phone
+        gender{code}
+        dob
+        cardIssued
+      }
+    }
+  }
+}

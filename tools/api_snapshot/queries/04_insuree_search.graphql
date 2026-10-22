@@ -1,0 +1,26 @@
+# Screen: Insured persons: search list (first page, sorted by insurance number)
+# Source: openimis-fe-insuree_js@develop src/actions.js fetchInsureeSummaries; filters from src/components/InsureeSearcher.jsx (defaultOrderBy chfId, page size 10)
+query GetInsurees {
+  insurees(first: 10, orderBy: ["chfId"]) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        validityFrom
+        validityTo
+        chfId
+        otherNames
+        lastName
+        phone
+        gender{code}
+        dob
+        marital
+        status
+        family{uuid,location{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}}}
+        currentVillage{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}}
+      }
+    }
+  }
+}

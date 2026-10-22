@@ -1,0 +1,21 @@
+# Screen: Families: search list (first page, newest first)
+# Source: openimis-fe-insuree_js@develop src/actions.js fetchFamilySummaries; filters from src/components/FamilySearcher.jsx (defaultOrderBy -validityFrom, page size 10)
+query GetFamilies {
+  families(first: 10, orderBy: ["-validityFrom"]) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        familyType{code}
+        poverty
+        confirmationNo
+        validityFrom
+        validityTo
+        headInsuree{id,uuid,chfId,lastName,otherNames,email,phone, dob}
+        location{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}}
+      }
+    }
+  }
+}

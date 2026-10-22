@@ -1,0 +1,22 @@
+# Screen: Contributions: search list (first page, newest payment first)
+# Source: openimis-fe-contribution_js@develop src/actions.js fetchContributionsSummaries; filters from src/components/ContributionSearcher.jsx (defaultOrderBy -payDate, page size 10)
+query GetPremiums {
+  premiums(first: 10, orderBy: ["-payDate"]) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        payDate
+        amount
+        payType
+        receipt
+        isPhotoFee
+        clientMutationId
+        validityTo
+        payer{id,uuid,name}
+      }
+    }
+  }
+}

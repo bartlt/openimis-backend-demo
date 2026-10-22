@@ -1,0 +1,33 @@
+# Screen: Health facilities: health facility detail page
+# Source: openimis-fe-location_js@develop src/actions.js fetchHealthFacility
+query GetHealthFacilities {
+  healthFacilities(uuid: "079e777b-b12b-4763-a646-3773e906f9d7", showHistory: true) {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        code
+        accCode
+        name
+        careType
+        address
+        phone
+        fax
+        email
+        legalForm{code, legalForm}
+        level
+        subLevel{code, healthFacilitySubLevel}
+        location{id, uuid, code, name, parent{id, uuid, code, name}}
+        servicesPricelist{id, uuid, name}
+        itemsPricelist{id, uuid, name}
+        catchments{id, location{id, uuid, code, name}, catchment}
+        contractStartDate
+        contractEndDate
+        status
+        validityFrom
+        validityTo
+      }
+    }
+  }
+}

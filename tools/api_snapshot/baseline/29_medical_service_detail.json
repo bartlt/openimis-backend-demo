@@ -1,0 +1,40 @@
+{
+  "query": "29_medical_service_detail",
+  "screen": "Medical services: service detail page with linked services/items",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "medicalServices": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjA="
+        },
+        "edges": [
+          {
+            "node": {
+              "uuid": "488d8bcb-5b88-438c-9077-f177f6f32626",
+              "code": "A1",
+              "name": "General Consultation",
+              "packagetype": "S",
+              "manualPrice": false,
+              "type": "P",
+              "price": "400.00",
+              "maximumAmount": null,
+              "careType": "O",
+              "frequency": 0,
+              "patientCategory": 15,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "S",
+              "category": "",
+              "serviceserviceSet": [],
+              "servicesLinked": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}

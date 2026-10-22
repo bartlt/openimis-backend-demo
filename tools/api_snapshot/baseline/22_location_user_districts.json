@@ -1,0 +1,71 @@
+{
+  "query": "22_location_user_districts",
+  "screen": "Locations: districts the logged-in user may access",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "userDistricts": [
+        {
+          "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+          "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+          "code": "R1D1",
+          "name": "District 1",
+          "parent": {
+            "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+            "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+            "code": "R1",
+            "name": "Region 1"
+          }
+        },
+        {
+          "id": "TG9jYXRpb25HUUxUeXBlOjE5",
+          "uuid": "2ee8ea9c-aef7-400b-9b36-f391f956f73e",
+          "code": "R2D1",
+          "name": "Rajo",
+          "parent": {
+            "id": "TG9jYXRpb25HUUxUeXBlOjE4",
+            "uuid": "68753566-9d2e-4cec-936e-4c6bf1968c0d",
+            "code": "R2",
+            "name": "Tahida"
+          }
+        },
+        {
+          "id": "TG9jYXRpb25HUUxUeXBlOjIw",
+          "uuid": "176d0c41-13dc-4faf-9c1e-95109f086059",
+          "code": "R2D2",
+          "name": "Vida",
+          "parent": {
+            "id": "TG9jYXRpb25HUUxUeXBlOjE4",
+            "uuid": "68753566-9d2e-4cec-936e-4c6bf1968c0d",
+            "code": "R2",
+            "name": "Tahida"
+          }
+        },
+        {
+          "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+          "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+          "code": "R1D2",
+          "name": "Jambero",
+          "parent": {
+            "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+            "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+            "code": "R1",
+            "name": "Region 1"
+          }
+        },
+        {
+          "id": "TG9jYXRpb25HUUxUeXBlOjU2",
+          "uuid": "e04c7312-46b0-4526-94d5-1717e4ec978f",
+          "code": "R1D3",
+          "name": "Uptol",
+          "parent": {
+            "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+            "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+            "code": "R1",
+            "name": "Region 1"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# Screen: Products: product picker / header (single product by id)
+# Source: openimis-fe-product_js@develop src/actions.js fetchProduct
+# Variables: {"productId": "UHJvZHVjdEdRTFR5cGU6Ng=="}
+query ($productId: ID) {
+  product: products(id: $productId) {
+    edges {
+      node {
+        id
+        uuid
+        code
+        name
+        ceilingType
+      }
+    }
+  }
+}

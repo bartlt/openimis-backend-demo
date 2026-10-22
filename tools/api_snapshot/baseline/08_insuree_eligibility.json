@@ -1,0 +1,23 @@
+{
+  "query": "08_insuree_eligibility",
+  "screen": "Insuree enquiry: remaining benefits (eligibility)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "policyEligibilityByInsuree": {
+        "prodId": "4",
+        "totalAdmissionsLeft": null,
+        "totalVisitsLeft": null,
+        "totalConsultationsLeft": null,
+        "totalSurgeriesLeft": null,
+        "totalDeliveriesLeft": null,
+        "totalAntenatalLeft": null,
+        "consultationAmountLeft": null,
+        "surgeryAmountLeft": null,
+        "deliveryAmountLeft": null,
+        "hospitalizationAmountLeft": null,
+        "antenatalAmountLeft": null
+      }
+    }
+  }
+}

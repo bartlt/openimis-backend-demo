@@ -1,0 +1,29 @@
+# Screen: Medical services: service detail page with linked services/items
+# Source: openimis-fe-medical_js@develop src/actions.js fetchMedicalService (MEDICAL_SERVICE_FULL_PROJECTION + linked sets)
+query GetMedicalServices {
+  medicalServices(uuid: "488d8bcb-5b88-438c-9077-f177f6f32626", showHistory: true) {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        uuid
+        code
+        name
+        packagetype
+        manualPrice
+        type
+        price
+        maximumAmount
+        careType
+        uuid
+        frequency
+        patientCategory
+        validityFrom
+        validityTo
+        level
+        category
+        serviceserviceSet{id service {id code name } qtyProvided, priceAsked, scpDate}
+        servicesLinked{id item {id code name } qtyProvided, priceAsked, pcpDate}
+      }
+    }
+  }
+}

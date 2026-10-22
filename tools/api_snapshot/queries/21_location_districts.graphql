@@ -1,0 +1,21 @@
+# Screen: Locations: districts of region R1
+# Source: openimis-fe-location_js@develop src/actions.js fetchLocations (type D, parent_Uuid)
+query GetLocations {
+  locations(type: "D", orderBy: "code", parent_Uuid: "75250515-40d7-4c77-bafe-a2c65ffc5a72") {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        type
+        code
+        name
+        malePopulation
+        femalePopulation
+        otherPopulation
+        families
+        clientMutationId
+      }
+    }
+  }
+}

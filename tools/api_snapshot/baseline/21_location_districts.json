@@ -1,0 +1,61 @@
+{
+  "query": "21_location_districts",
+  "screen": "Locations: districts of region R1",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "locations": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjI="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+              "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+              "type": "D",
+              "code": "R1D1",
+              "name": "District 1",
+              "malePopulation": null,
+              "femalePopulation": null,
+              "otherPopulation": null,
+              "families": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+              "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+              "type": "D",
+              "code": "R1D2",
+              "name": "Jambero",
+              "malePopulation": null,
+              "femalePopulation": null,
+              "otherPopulation": null,
+              "families": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "TG9jYXRpb25HUUxUeXBlOjU2",
+              "uuid": "e04c7312-46b0-4526-94d5-1717e4ec978f",
+              "type": "D",
+              "code": "R1D3",
+              "name": "Uptol",
+              "malePopulation": null,
+              "femalePopulation": null,
+              "otherPopulation": null,
+              "families": null,
+              "clientMutationId": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

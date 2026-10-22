@@ -1,0 +1,305 @@
+{
+  "query": "15_claim_detail",
+  "screen": "Claims: claim detail page with services and items",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "claim": {
+        "uuid": "2e5b57f2-d6a0-4aeb-8c55-d58b3f2457c3",
+        "code": "CIA00001",
+        "dateFrom": "2019-01-23",
+        "dateTo": "2019-01-23",
+        "dateClaimed": "2019-01-23",
+        "claimed": "11810.00",
+        "approved": null,
+        "valuated": null,
+        "status": 4,
+        "feedbackStatus": 1,
+        "reviewStatus": 1,
+        "guaranteeId": "",
+        "explanation": "",
+        "adjustment": null,
+        "attachmentsCount": 0,
+        "careType": null,
+        "restore": null,
+        "healthFacility": {
+          "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjY=",
+          "uuid": "05c0d312-7cf2-4e21-8004-a78eec008f5a",
+          "code": "VIHOS001",
+          "name": "Vida District Hospital",
+          "level": "H",
+          "servicesPricelist": {
+            "id": "U2VydmljZXNQcmljZWxpc3RHUUxUeXBlOjE3",
+            "uuid": "b7da100f-8398-45d9-a11f-f251476502dd"
+          },
+          "itemsPricelist": {
+            "id": "SXRlbXNQcmljZWxpc3RHUUxUeXBlOjY=",
+            "uuid": "2716ebfc-68e8-47c4-8b34-942b4b48120e"
+          },
+          "contractStartDate": null,
+          "contractEndDate": null,
+          "location": {
+            "id": "TG9jYXRpb25HUUxUeXBlOjIw",
+            "uuid": "176d0c41-13dc-4faf-9c1e-95109f086059",
+            "code": "R2D2",
+            "name": "Vida",
+            "type": "D",
+            "parent": {
+              "id": "TG9jYXRpb25HUUxUeXBlOjE4",
+              "uuid": "68753566-9d2e-4cec-936e-4c6bf1968c0d",
+              "code": "R2",
+              "name": "Tahida",
+              "type": "R"
+            }
+          }
+        },
+        "referFrom": null,
+        "referTo": null,
+        "insuree": {
+          "id": "SW5zdXJlZUdRTFR5cGU6NDU=",
+          "uuid": "08037c23-5958-4cb3-9dfd-7adafb4e16e4",
+          "chfId": "10500001",
+          "lastName": "Ilina",
+          "otherNames": "Ethu",
+          "dob": "1988-07-10"
+        },
+        "visitType": "O",
+        "admin": {
+          "id": "Q2xhaW1BZG1pbkdRTFR5cGU6MTg=",
+          "uuid": "f67b39d7-103b-4d00-b0b5-5fe8e8bd0382",
+          "code": "VHOS0011",
+          "lastName": "Man",
+          "otherNames": "Roger",
+          "healthFacility": {
+            "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjY=",
+            "uuid": "05c0d312-7cf2-4e21-8004-a78eec008f5a",
+            "code": "VIHOS001",
+            "name": "Vida District Hospital",
+            "level": "H",
+            "servicesPricelist": {
+              "id": "U2VydmljZXNQcmljZWxpc3RHUUxUeXBlOjE3",
+              "uuid": "b7da100f-8398-45d9-a11f-f251476502dd"
+            },
+            "itemsPricelist": {
+              "id": "SXRlbXNQcmljZWxpc3RHUUxUeXBlOjY=",
+              "uuid": "2716ebfc-68e8-47c4-8b34-942b4b48120e"
+            },
+            "location": {
+              "id": "TG9jYXRpb25HUUxUeXBlOjIw",
+              "uuid": "176d0c41-13dc-4faf-9c1e-95109f086059",
+              "code": "R2D2",
+              "name": "Vida",
+              "parent": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjE4",
+                "uuid": "68753566-9d2e-4cec-936e-4c6bf1968c0d",
+                "code": "R2",
+                "name": "Tahida"
+              }
+            }
+          }
+        },
+        "icd": {
+          "id": "RGlhZ25vc2lzR1FMVHlwZToxMg==",
+          "code": "A0104",
+          "name": "Typhoid arthritis"
+        },
+        "icd1": null,
+        "icd2": null,
+        "icd3": null,
+        "icd4": null,
+        "preAuthorization": false,
+        "patientCondition": null,
+        "referralCode": null,
+        "jsonExt": null,
+        "services": [
+          {
+            "id": "4",
+            "product": null,
+            "service": {
+              "id": "U2VydmljZUdRTFR5cGU6OTA=",
+              "code": "A1",
+              "name": "General Consultation",
+              "price": "400.00",
+              "maximumAmount": null,
+              "manualPrice": false,
+              "packagetype": "S"
+            },
+            "qtyProvided": "1.00",
+            "priceAsked": "400.00",
+            "qtyApproved": null,
+            "priceApproved": null,
+            "priceValuated": null,
+            "priceAdjusted": null,
+            "explanation": "",
+            "justification": null,
+            "rejectionReason": 0,
+            "status": 1,
+            "items": [],
+            "services": []
+          },
+          {
+            "id": "5",
+            "product": null,
+            "service": {
+              "id": "U2VydmljZUdRTFR5cGU6OTA=",
+              "code": "A1",
+              "name": "General Consultation",
+              "price": "400.00",
+              "maximumAmount": null,
+              "manualPrice": false,
+              "packagetype": "S"
+            },
+            "qtyProvided": "4.00",
+            "priceAsked": "1900.00",
+            "qtyApproved": null,
+            "priceApproved": null,
+            "priceValuated": null,
+            "priceAdjusted": null,
+            "explanation": "",
+            "justification": null,
+            "rejectionReason": 0,
+            "status": 1,
+            "items": [],
+            "services": []
+          },
+          {
+            "id": "6",
+            "product": null,
+            "service": {
+              "id": "U2VydmljZUdRTFR5cGU6NjU=",
+              "code": "R1",
+              "name": "NON-HOSPITAL REGISTRATION",
+              "price": "330.00",
+              "maximumAmount": null,
+              "manualPrice": false,
+              "packagetype": "S"
+            },
+            "qtyProvided": "2.00",
+            "priceAsked": "330.00",
+            "qtyApproved": null,
+            "priceApproved": null,
+            "priceValuated": null,
+            "priceAdjusted": null,
+            "explanation": "",
+            "justification": null,
+            "rejectionReason": 0,
+            "status": 1,
+            "items": [],
+            "services": []
+          },
+          {
+            "id": "17",
+            "product": null,
+            "service": {
+              "id": "U2VydmljZUdRTFR5cGU6NzQ=",
+              "code": "I1",
+              "name": " BLOOD SUGAR- RANDOM OR FASTING",
+              "price": "1300.00",
+              "maximumAmount": null,
+              "manualPrice": false,
+              "packagetype": "S"
+            },
+            "qtyProvided": "1.00",
+            "priceAsked": "1300.00",
+            "qtyApproved": null,
+            "priceApproved": null,
+            "priceValuated": null,
+            "priceAdjusted": null,
+            "explanation": "",
+            "justification": null,
+            "rejectionReason": 0,
+            "status": 1,
+            "items": [],
+            "services": []
+          }
+        ],
+        "items": [
+          {
+            "id": "3",
+            "product": null,
+            "item": {
+              "id": "SXRlbUdRTFR5cGU6MjI=",
+              "code": "0022",
+              "name": "ATENOLOL 50MG TABLTES",
+              "price": "130.00",
+              "maximumAmount": null
+            },
+            "qtyProvided": "2.00",
+            "priceAsked": "130.00",
+            "qtyApproved": null,
+            "priceApproved": null,
+            "priceValuated": null,
+            "priceAdjusted": null,
+            "explanation": "",
+            "justification": null,
+            "rejectionReason": 0,
+            "status": 1
+          },
+          {
+            "id": "4",
+            "product": null,
+            "item": {
+              "id": "SXRlbUdRTFR5cGU6MTE=",
+              "code": "0011",
+              "name": "AMOXICILLIN  CAPSULESULES 250MG",
+              "price": "40.00",
+              "maximumAmount": null
+            },
+            "qtyProvided": "4.00",
+            "priceAsked": "40.00",
+            "qtyApproved": null,
+            "priceApproved": null,
+            "priceValuated": null,
+            "priceAdjusted": null,
+            "explanation": "",
+            "justification": null,
+            "rejectionReason": 0,
+            "status": 1
+          },
+          {
+            "id": "5",
+            "product": null,
+            "item": {
+              "id": "SXRlbUdRTFR5cGU6MjUw",
+              "code": "0250",
+              "name": "VITAMIN A CAPSULESULE  1000I.U",
+              "price": "140.00",
+              "maximumAmount": null
+            },
+            "qtyProvided": "3.00",
+            "priceAsked": "140.00",
+            "qtyApproved": null,
+            "priceApproved": null,
+            "priceValuated": null,
+            "priceAdjusted": null,
+            "explanation": "",
+            "justification": null,
+            "rejectionReason": 0,
+            "status": 1
+          },
+          {
+            "id": "12",
+            "product": null,
+            "item": {
+              "id": "SXRlbUdRTFR5cGU6NTg=",
+              "code": "0058",
+              "name": "CHLORAMPHENICOL SYRUP 125MG/5ML 100MLS",
+              "price": "1010.00",
+              "maximumAmount": null
+            },
+            "qtyProvided": "1.00",
+            "priceAsked": "1010.00",
+            "qtyApproved": null,
+            "priceApproved": null,
+            "priceValuated": null,
+            "priceAdjusted": null,
+            "explanation": "",
+            "justification": null,
+            "rejectionReason": 0,
+            "status": 1
+          }
+        ]
+      }
+    }
+  }
+}

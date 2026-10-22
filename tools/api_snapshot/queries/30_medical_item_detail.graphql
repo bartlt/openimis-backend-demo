@@ -1,0 +1,25 @@
+# Screen: Medical items: item detail page
+# Source: openimis-fe-medical_js@develop src/actions.js fetchMedicalItem (MEDICAL_ITEM_FULL_PROJECTION)
+query GetMedicalItems {
+  medicalItems(uuid: "71efb78b-64ee-4a68-be29-87daf566eb20", showHistory: true) {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        uuid
+        code
+        name
+        type
+        quantity
+        maximumAmount
+        price
+        careType
+        uuid
+        frequency
+        patientCategory
+        validityFrom
+        validityTo
+        package
+      }
+    }
+  }
+}
