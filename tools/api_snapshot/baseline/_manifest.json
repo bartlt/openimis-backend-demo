@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-10-22T15:43:05+00:00",
+  "created_utc": "2026-10-22T16:15:19+00:00",
   "git": {
     "commit": "035df915",
     "ref": "tags/baseline-django42-green"
@@ -14,9 +14,9 @@
   "queries": 30,
   "failed": [],
   "timings_seconds": {
-    "django_setup": 1.36,
-    "login": 1.53,
-    "queries": 1.39,
-    "total": 4.28
+    "django_setup": 1.01,
+    "login": 1.38,
+    "queries": 0.99,
+    "total": 3.38
   }
 }

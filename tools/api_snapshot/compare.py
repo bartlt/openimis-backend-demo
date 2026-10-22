@@ -64,6 +64,17 @@ def changes(a, b, path="response"):
         yield path, a, b
 
 
+def same_json(a, b):
+    """Equality on the JSON text, so true vs 1 or 1 vs 1.0 count as changes (Python's == says equal)."""
+    return json.dumps(a, sort_keys=True) == json.dumps(b, sort_keys=True)
+
+
+def failed(snap):
+    """A query that errored can't prove anything, even if both sides error the same way."""
+    response = snap.get("response")
+    return snap.get("http_status") != 200 or (isinstance(response, dict) and bool(response.get("errors")))
+
+
 def count_values(value):
     """Number of individual data values (leaves) in a response, for the 'values compared' figure."""
     if isinstance(value, dict):
@@ -101,8 +112,8 @@ def compare(before, after):
                "changes": [], "unified": ""}
         if a is None or b is None:
             row["status"] = "only in before" if b is None else "only in after"
-        elif a == b:
-            row["status"] = "identical"
+        elif same_json(a, b):
+            row["status"] = "fails in both" if failed(a) else "identical"
         else:
             row["status"] = "different"
             row["changes"] = list(changes(a.get("response"), b.get("response")))

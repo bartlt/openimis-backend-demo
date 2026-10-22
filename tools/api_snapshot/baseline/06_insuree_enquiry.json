@@ -20,7 +20,7 @@
               "lastName": "Macintyre",
               "otherNames": "Joseph",
               "dob": "1950-07-12",
-              "age": 76,
+              "age": "<volatile>",
               "validityFrom": "2018-03-27T06:43:15.817000",
               "validityTo": null,
               "gender": {
@@ -47,7 +47,7 @@
                   "lastName": "Macintyre",
                   "otherNames": "Joseph",
                   "dob": "1950-07-12",
-                  "age": 76,
+                  "age": "<volatile>",
                   "validityFrom": "2018-03-27T06:43:15.817000",
                   "validityTo": null,
                   "photo": {

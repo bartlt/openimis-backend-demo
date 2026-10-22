@@ -18,36 +18,50 @@ Graphene 2 and Graphene 3 can't be installed side by side, and the openIMIS modu
 (`snapshot.py` refuses to run if the Python it's launched with loads modules from a different checkout than `--repo`).
 
 ```bash
-# from this repo (checked out on a branch that has tools/api_snapshot, e.g. main), with the database running
-MIGRATION_BRANCH=<the Django 5.2 / Graphene 3 branch>
+# from this repo (on main), with the database running. main is the upgraded code (Django 5.2 / Graphene 3).
 git fetch origin
 git worktree add --detach ~/oi-before baseline-django42-green
-git worktree add --detach ~/oi-after "origin/$MIGRATION_BRANCH"
+git worktree add --detach ~/oi-after origin/main
 for d in ~/oi-before ~/oi-after; do (
   cd "$d" && uv venv -p 3.11 .venv &&
   uv pip install --python .venv "setuptools<81" -r requirements.txt &&
   cd script && ../.venv/bin/python modules-requirements.py ../openimis.json > modules-requirements.txt &&
   uv pip install --python ../.venv -r modules-requirements.txt
 ) done
-# warm-up (first run compiles .pyc files, ~13 s; later runs ~5 s). Also run migrate here if the new branch adds migrations.
+# warm-up (first run compiles .pyc files, ~13 s; later runs ~5 s)
 ~/oi-before/.venv/bin/python tools/api_snapshot/snapshot.py --repo ~/oi-before --out /tmp/before
+(cd ~/oi-after/openIMIS && ../.venv/bin/python manage.py migrate)   # new code needs axes 0009, see below
 ~/oi-after/.venv/bin/python  tools/api_snapshot/snapshot.py --repo ~/oi-after  --out /tmp/after
 ```
 
-Run:
+**Database migration between the two snapshots.** The upgraded code ships one new migration, `axes.0009_add_session_hash`
+(django-axes 7 adds a required `session_hash` column to its login log). Without it the new code can't log in; with it the
+old code can't log in (`null value in column "session_hash"`). Both share one database, so either use the one-snapshot
+flow below, or switch the schema around the "before" snapshot:
+`(cd ~/oi-after/openIMIS && ../.venv/bin/python manage.py migrate axes 0008)` before it, and `... manage.py migrate` (~2 s) after it.
+The migration only touches the login-attempt log, not any data the queries read.
+
+Run, simplest (new code against the committed baseline, database stays migrated, ~5 s):
 
 ```bash
-~/oi-before/.venv/bin/python tools/api_snapshot/snapshot.py --repo ~/oi-before --out /tmp/before   # old code, ~5 s
-~/oi-after/.venv/bin/python  tools/api_snapshot/snapshot.py --repo ~/oi-after  --out /tmp/after    # new code, ~5 s
-python3 tools/api_snapshot/compare.py /tmp/before /tmp/after --report /tmp/api-report.html         # < 1 s
+~/oi-after/.venv/bin/python tools/api_snapshot/snapshot.py --repo ~/oi-after --out /tmp/after      # new code, ~5 s
+python3 tools/api_snapshot/compare.py tools/api_snapshot/baseline /tmp/after --report /tmp/api-report.html
 xdg-open /tmp/api-report.html   # open the report
 ```
 
-Shortcut: compare the new code directly with the committed baseline, `python3 tools/api_snapshot/compare.py tools/api_snapshot/baseline /tmp/after`.
+Or both versions live (~12 s):
+
+```bash
+(cd ~/oi-after/openIMIS && ../.venv/bin/python manage.py migrate axes 0008)                         # old schema, ~2 s
+~/oi-before/.venv/bin/python tools/api_snapshot/snapshot.py --repo ~/oi-before --out /tmp/before   # old code, ~5 s
+(cd ~/oi-after/openIMIS && ../.venv/bin/python manage.py migrate)                                   # new schema, ~2 s
+~/oi-after/.venv/bin/python  tools/api_snapshot/snapshot.py --repo ~/oi-after  --out /tmp/after    # new code, ~5 s
+python3 tools/api_snapshot/compare.py /tmp/before /tmp/after --report /tmp/api-report.html         # < 1 s
+```
 
 Single checkout instead of worktrees (slower, needs a reinstall in between): copy `tools/api_snapshot` somewhere outside
 the repo first (the tag doesn't contain it), then `git checkout baseline-django42-green`, reinstall the requirements,
-snapshot to `/tmp/before`; `git checkout $MIGRATION_BRANCH`, reinstall, snapshot to `/tmp/after`; compare.
+snapshot to `/tmp/before`; `git checkout main`, reinstall, `manage.py migrate`, snapshot to `/tmp/after`; compare.
 
 Without worktrees the same commands work from this checkout with its own venv:
 `python tools/api_snapshot/snapshot.py --out /tmp/now`.
@@ -84,14 +98,26 @@ All 30 return HTTP 200 without GraphQL errors on `baseline-django42-green`; none
 
 ## Normalization rules
 
-Responses are saved exactly as returned, with one rule: the values of the keys `token`, `refreshToken`, `refresh_token`,
-`csrfToken`, `refreshExpiresIn`, `last_login` and `lastLogin` are replaced by `"<volatile>"` (login tokens and expiry times
-computed from "now"). None of these appear in the current query set; the rule is a safety net. Nothing is sorted,
-rounded or reformatted, so a change in ordering, types (e.g. `"4"` vs `4`), `null`s or error messages is reported.
-`compare.py` compares JSON values (key order inside an object is ignored; list order is not). `_manifest.json`
-(versions, git ref, timings) is shown in the report header but never compared.
+Responses are saved exactly as returned, except that the values of these keys are replaced by `"<volatile>"`:
+- `token`, `refreshToken`, `refresh_token`, `csrfToken`, `refreshExpiresIn`, `last_login`, `lastLogin`: login tokens and
+  expiry times computed from "now". None appear in the current query set; the rule is a safety net.
+- `age`: the API computes it from today's date, so without this the committed baseline would stop matching on each
+  featured insuree's birthday (`dob`, which age is derived from, is still compared).
 
-## Proof it works (measured on `baseline-django42-green`)
+Nothing is sorted, rounded or reformatted, so a change in ordering, types (e.g. `"4"` vs `4`, `true` vs `1`), `null`s
+or error messages is reported. `compare.py` compares the JSON text (key order inside an object is ignored; list order
+is not). A query that returns an error or a non-200 status on both sides is reported as `FAILS IN BOTH`, not identical,
+and makes `compare.py` exit 1. `_manifest.json` (versions, git ref, timings) is shown in the report header but never compared.
+If other date-dependent results (e.g. remaining benefits after a policy expires) drift over time, regenerate the baseline
+with `python tools/api_snapshot/snapshot.py --out tools/api_snapshot/baseline` on `baseline-django42-green`.
+
+## Proof it works
+
+- **Upgrade result**: `main` after the upgrade (Django 5.2.18, Graphene 3.4.3) against the committed baseline (Django 4.2.30,
+  Graphene 2.1.9) → `30 queries, 30 identical, 0 different (3754 values compared)`, exit 0. Same result for the live
+  before/after flow with the `axes` migration switch above.
+
+Measured on `baseline-django42-green`:
 
 - **Determinism**: two snapshots of the same code → `30 queries, 30 identical, 0 different (3754 values compared)`, exit 0.
 - **Catches a change**: temporarily changing one line of app code (`ClaimGQLType.resolve_attachments_count` returning
