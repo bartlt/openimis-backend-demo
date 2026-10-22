@@ -1,0 +1,20 @@
+# Screen: Policies: contributions paid for a policy
+# Source: openimis-fe-contribution_js@develop src/actions.js fetchPoliciesPremiums; filter from src/components/ContributionForm.jsx
+query GetPremiumsByPolicies {
+  premiumsByPolicies(policyUuids: ["a3df066b-3e23-429a-92ad-cd1ef46daa2f"]) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        payDate
+        payer{id,uuid,name}
+        amount
+        payType
+        receipt
+        isPhotoFee
+      }
+    }
+  }
+}

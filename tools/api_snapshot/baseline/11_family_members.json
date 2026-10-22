@@ -1,0 +1,95 @@
+{
+  "query": "11_family_members",
+  "screen": "Families: family members table",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "familyMembers": {
+        "totalCount": 5,
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjQ="
+        },
+        "edges": [
+          {
+            "node": {
+              "uuid": "0539afeb-21a1-4b3f-9478-23e6f41b0024",
+              "chfId": "070707070",
+              "otherNames": "Joseph",
+              "lastName": "Macintyre",
+              "head": true,
+              "phone": "",
+              "gender": {
+                "code": "M"
+              },
+              "dob": "1950-07-12",
+              "cardIssued": false
+            }
+          },
+          {
+            "node": {
+              "uuid": "7b00e6ec-e0f5-4d07-a8e0-ec00a4160e73",
+              "chfId": "070707081",
+              "otherNames": "Jane",
+              "lastName": "Macintyre",
+              "head": false,
+              "phone": "",
+              "gender": {
+                "code": "F"
+              },
+              "dob": "1952-05-07",
+              "cardIssued": false
+            }
+          },
+          {
+            "node": {
+              "uuid": "d8393487-c3aa-4d3a-b56f-82f9b3b47a46",
+              "chfId": "070707066",
+              "otherNames": "Abu",
+              "lastName": "Macintyre",
+              "head": false,
+              "phone": "",
+              "gender": {
+                "code": "M"
+              },
+              "dob": "1973-11-21",
+              "cardIssued": false
+            }
+          },
+          {
+            "node": {
+              "uuid": "f13100e9-9ab3-47b8-8579-150beb56ffad",
+              "chfId": "070707092",
+              "otherNames": "Adele",
+              "lastName": "Macintyre",
+              "head": false,
+              "phone": "",
+              "gender": {
+                "code": "F"
+              },
+              "dob": "1974-06-11",
+              "cardIssued": false
+            }
+          },
+          {
+            "node": {
+              "uuid": "4d908777-50ff-44c3-81f2-48f27517c798",
+              "chfId": "070707055",
+              "otherNames": "Jet",
+              "lastName": "Macintyre",
+              "head": false,
+              "phone": "",
+              "gender": {
+                "code": "F"
+              },
+              "dob": "2005-10-16",
+              "cardIssued": false
+            }
+          }
+        ]
+      }
+    }
+  }
+}

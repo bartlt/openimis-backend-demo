@@ -1,0 +1,510 @@
+{
+  "query": "09_family_search",
+  "screen": "Families: search list (first page, newest first)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "families": {
+        "totalCount": 21,
+        "pageInfo": {
+          "hasNextPage": true,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjk="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToyMg==",
+              "uuid": "5335fb32-480f-46b6-90be-e45256211254",
+              "familyType": null,
+              "poverty": null,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-28T09:17:23.087000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6MTE1",
+                "uuid": "ee090430-24bc-4509-bac1-e116abc7d396",
+                "chfId": "174000001",
+                "lastName": "Duby",
+                "otherNames": "Zuby",
+                "email": "",
+                "phone": "",
+                "dob": "1993-01-10"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjYz",
+                "uuid": "f28d1e17-92ea-4db4-b26b-88ca429731b5",
+                "code": "R1D1M3V1",
+                "name": "Rathula",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjQ3",
+                  "uuid": "522c4c5e-10f1-4f6a-98ef-1ae75a259eb5",
+                  "code": "R1D1M3",
+                  "name": "Adhi",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                    "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                    "code": "R1D1",
+                    "name": "District 1",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                      "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                      "code": "R1",
+                      "name": "Region 1",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToyMQ==",
+              "uuid": "d30174d0-9523-48d6-87c8-de4183d09f6b",
+              "familyType": null,
+              "poverty": null,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-28T09:05:03.210000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6MTEx",
+                "uuid": "76840729-07dd-44a3-953b-ed7b43e606af",
+                "chfId": "173000001",
+                "lastName": "Nathan",
+                "otherNames": "Kobi",
+                "email": "",
+                "phone": "",
+                "dob": "1993-05-02"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjYy",
+                "uuid": "b29ccc93-779d-459c-942c-df0b98b22ebb",
+                "code": "R1D2M2V1",
+                "name": "Agilo",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjU4",
+                  "uuid": "cac524c0-1bac-4c96-9376-9d0ee35eb0aa",
+                  "code": "R1D2M2",
+                  "name": "Remorlogy",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                    "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                    "code": "R1D2",
+                    "name": "Jambero",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                      "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                      "code": "R1",
+                      "name": "Region 1",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToyMA==",
+              "uuid": "c306dd44-f375-4380-8c9e-e3b7b5b94dbf",
+              "familyType": null,
+              "poverty": true,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-25T23:27:42.737000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6NDk=",
+                "uuid": "f22fddc4-d78c-44a5-aeab-aa00537e2968",
+                "chfId": "172000001",
+                "lastName": "Jorrison",
+                "otherNames": "Manny",
+                "email": "",
+                "phone": "",
+                "dob": "1979-05-08"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjQ1",
+                "uuid": "9ea9f849-2c7c-4454-810d-cf60bde6bdc7",
+                "code": "R2D2M1V1",
+                "name": "Radho",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjQ0",
+                  "uuid": "225789ce-4d14-4098-8ae2-3c90e96fae8f",
+                  "code": "R2D2M1",
+                  "name": "Majhi",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjIw",
+                    "uuid": "176d0c41-13dc-4faf-9c1e-95109f086059",
+                    "code": "R2D2",
+                    "name": "Vida",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE4",
+                      "uuid": "68753566-9d2e-4cec-936e-4c6bf1968c0d",
+                      "code": "R2",
+                      "name": "Tahida",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToxOQ==",
+              "uuid": "6cca9f8e-804f-45f9-82d7-ef882de1e77f",
+              "familyType": null,
+              "poverty": false,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-25T23:24:16.293000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6NDg=",
+                "uuid": "a83ee517-04b2-4957-8c11-e9e83b13316c",
+                "chfId": "171000001",
+                "lastName": "Jeremiah",
+                "otherNames": "Joseph",
+                "email": "",
+                "phone": "",
+                "dob": "1983-05-19"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjYw",
+                "uuid": "d7c17b9f-c508-4b92-b308-4c3727a5ada0",
+                "code": "R1D2M1V2",
+                "name": "Octo",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjU3",
+                  "uuid": "4cf9a26d-6cb9-48cc-b42b-55ef61a9d0f2",
+                  "code": "R1D2M1",
+                  "name": "Actoloby",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                    "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                    "code": "R1D2",
+                    "name": "Jambero",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                      "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                      "code": "R1",
+                      "name": "Region 1",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToxOA==",
+              "uuid": "690fcf6d-fec6-48b6-8684-dd32d13fe877",
+              "familyType": null,
+              "poverty": null,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-20T09:37:46.297000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6NDU=",
+                "uuid": "08037c23-5958-4cb3-9dfd-7adafb4e16e4",
+                "chfId": "10500001",
+                "lastName": "Ilina",
+                "otherNames": "Ethu",
+                "email": "",
+                "phone": "",
+                "dob": "1988-07-10"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjQ1",
+                "uuid": "9ea9f849-2c7c-4454-810d-cf60bde6bdc7",
+                "code": "R2D2M1V1",
+                "name": "Radho",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjQ0",
+                  "uuid": "225789ce-4d14-4098-8ae2-3c90e96fae8f",
+                  "code": "R2D2M1",
+                  "name": "Majhi",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjIw",
+                    "uuid": "176d0c41-13dc-4faf-9c1e-95109f086059",
+                    "code": "R2D2",
+                    "name": "Vida",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE4",
+                      "uuid": "68753566-9d2e-4cec-936e-4c6bf1968c0d",
+                      "code": "R2",
+                      "name": "Tahida",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToxNw==",
+              "uuid": "1e055f4e-bd7c-4f60-85ba-b55295e9414f",
+              "familyType": null,
+              "poverty": null,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-20T09:37:14.933000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6NDQ=",
+                "uuid": "55c8cabb-e67d-405d-b7f4-5e4435cc2eff",
+                "chfId": "104000001",
+                "lastName": "Nonino",
+                "otherNames": "Ageni",
+                "email": "",
+                "phone": "",
+                "dob": "1979-03-19"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjIy",
+                "uuid": "b2e5b0c1-3d57-408c-b7de-11511ce1cbcf",
+                "code": "R2D1M1V1",
+                "name": "Utha",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjIx",
+                  "uuid": "bf590058-be5c-494e-9e05-c7f2695c645e",
+                  "code": "R2D1M1",
+                  "name": "Jaber",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjE5",
+                    "uuid": "2ee8ea9c-aef7-400b-9b36-f391f956f73e",
+                    "code": "R2D1",
+                    "name": "Rajo",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE4",
+                      "uuid": "68753566-9d2e-4cec-936e-4c6bf1968c0d",
+                      "code": "R2",
+                      "name": "Tahida",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToxNg==",
+              "uuid": "d66d403a-ea81-410e-9556-5b9f3919e97e",
+              "familyType": null,
+              "poverty": null,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-20T09:35:14.207000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6NDE=",
+                "uuid": "86d61e39-f153-46ba-94a6-4b36faedc76e",
+                "chfId": "103000001",
+                "lastName": "Chakalio",
+                "otherNames": "Alo",
+                "email": "",
+                "phone": "",
+                "dob": "1990-06-17"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjY4",
+                "uuid": "f30342eb-94bf-4155-92d2-77eaf6559cd6",
+                "code": "R1D3M1V1",
+                "name": "Uminalum",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjY3",
+                  "uuid": "7e89aae5-3627-49e9-aa94-bf387c510939",
+                  "code": "R1D3M1",
+                  "name": "Uminal",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU2",
+                    "uuid": "e04c7312-46b0-4526-94d5-1717e4ec978f",
+                    "code": "R1D3",
+                    "name": "Uptol",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                      "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                      "code": "R1",
+                      "name": "Region 1",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToxNQ==",
+              "uuid": "ea623c7c-d9c3-451a-bd5f-d6c3cf4953e1",
+              "familyType": null,
+              "poverty": null,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-20T09:25:16.010000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6MzU=",
+                "uuid": "0420825c-3e19-41ee-a868-0440ed76b34d",
+                "chfId": "102000001",
+                "lastName": "Oberjine",
+                "otherNames": "Zula",
+                "email": "",
+                "phone": "",
+                "dob": "1987-03-10"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjY2",
+                "uuid": "e4a522fc-fa81-4954-9f11-1fee3853dbc0",
+                "code": "R1D1M5V1",
+                "name": "Rolo",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjQ5",
+                  "uuid": "6c3b52cb-7926-4345-8048-77ac99ae80c1",
+                  "code": "R1D1M5",
+                  "name": "Radler",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                    "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                    "code": "R1D1",
+                    "name": "District 1",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                      "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                      "code": "R1",
+                      "name": "Region 1",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToxNA==",
+              "uuid": "ca70b30c-be24-4083-95f6-5794a838188c",
+              "familyType": null,
+              "poverty": null,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-20T09:24:45.037000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6MzQ=",
+                "uuid": "4f5d3bb7-45d1-48ee-97a9-b49646f1f2a6",
+                "chfId": "101000001",
+                "lastName": "Listy",
+                "otherNames": "Agen",
+                "email": "",
+                "phone": "",
+                "dob": "1974-10-17"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjYz",
+                "uuid": "f28d1e17-92ea-4db4-b26b-88ca429731b5",
+                "code": "R1D1M3V1",
+                "name": "Rathula",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjQ3",
+                  "uuid": "522c4c5e-10f1-4f6a-98ef-1ae75a259eb5",
+                  "code": "R1D1M3",
+                  "name": "Adhi",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                    "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                    "code": "R1D1",
+                    "name": "District 1",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                      "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                      "code": "R1",
+                      "name": "Region 1",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "RmFtaWx5R1FMVHlwZToxMw==",
+              "uuid": "c2949061-1725-44a3-9776-04cf2e3ca6bd",
+              "familyType": null,
+              "poverty": null,
+              "confirmationNo": "",
+              "validityFrom": "2018-03-20T09:24:05.450000",
+              "validityTo": null,
+              "headInsuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6MzM=",
+                "uuid": "0bbc73e5-d4f1-4d4c-8951-83d3806180b8",
+                "chfId": "190000012",
+                "lastName": "Jobolocy",
+                "otherNames": "Acloby",
+                "email": "",
+                "phone": "",
+                "dob": "1969-08-12"
+              },
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjY0",
+                "uuid": "40485985-e4ab-43f9-9700-bf80e342a1ee",
+                "code": "R1D1M2V1",
+                "name": "Jamula",
+                "type": "V",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjQ2",
+                  "uuid": "820e1a1f-4195-445b-a14c-4f762fad6780",
+                  "code": "R1D1M2",
+                  "name": "Jamu",
+                  "type": "W",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                    "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                    "code": "R1D1",
+                    "name": "District 1",
+                    "type": "D",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                      "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                      "code": "R1",
+                      "name": "Region 1",
+                      "type": "R"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

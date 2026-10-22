@@ -1,0 +1,23 @@
+# Screen: Contributions: contribution detail page
+# Source: openimis-fe-contribution_js@develop src/actions.js fetchContribution (CONTRIBUTION_FULL_PROJECTION)
+query GetPremiums {
+  premiums(uuid: "2829128a-a60a-4f98-9bcd-e39564a328b4") {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        payDate
+        amount
+        payType
+        receipt
+        isPhotoFee
+        otherPremiums
+        validityTo
+        clientMutationId
+        payer{id,uuid,name}
+        policy{id,uuid,startDate,product{name, code, maxInstallments},expiryDate,value,sumPremiums,family{id, uuid, headInsuree{chfId, lastName, otherNames, dob}}}
+      }
+    }
+  }
+}

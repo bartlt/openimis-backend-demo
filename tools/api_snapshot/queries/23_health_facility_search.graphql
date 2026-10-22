@@ -1,0 +1,27 @@
+# Screen: Health facilities: search list (first page)
+# Source: openimis-fe-location_js@develop src/actions.js fetchHealthFacilitySummaries; page size from src/components/HealthFacilitiesSearcher.jsx (10)
+query GetHealthFacilities {
+  healthFacilities(first: 10) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        code
+        accCode
+        name
+        careType
+        phone
+        fax
+        email
+        level
+        legalForm{code, legalForm}
+        location{code,name, parent{code, name}}
+        validityFrom
+        validityTo
+        clientMutationId
+      }
+    }
+  }
+}

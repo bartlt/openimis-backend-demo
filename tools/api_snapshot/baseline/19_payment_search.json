@@ -1,0 +1,19 @@
+{
+  "query": "19_payment_search",
+  "screen": "Payments: search list (first page, newest received first)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "payments": {
+        "totalCount": 0,
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": null,
+          "endCursor": null
+        },
+        "edges": []
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "query": "17_contribution_detail",
+  "screen": "Contributions: contribution detail page",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "premiums": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjA="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6MzE=",
+              "uuid": "2829128a-a60a-4f98-9bcd-e39564a328b4",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "B",
+              "receipt": "555",
+              "isPhotoFee": false,
+              "otherPremiums": null,
+              "validityTo": null,
+              "clientMutationId": null,
+              "payer": {
+                "id": "UGF5ZXJHUUxUeXBlOjE=",
+                "uuid": "23602095-e132-4d4d-ac77-a64508323273",
+                "name": "Coffee Farmers Association"
+              },
+              "policy": {
+                "id": "UG9saWN5R1FMVHlwZTox",
+                "uuid": "a3df066b-3e23-429a-92ad-cd1ef46daa2f",
+                "startDate": "2019-08-20",
+                "product": {
+                  "name": "Basic Cover Ultha",
+                  "code": "BCUL0001",
+                  "maxInstallments": 1
+                },
+                "expiryDate": "2020-08-19",
+                "value": "10000.00",
+                "sumPremiums": 10000.0,
+                "family": {
+                  "id": "RmFtaWx5R1FMVHlwZTox",
+                  "uuid": "822a8e55-2290-4df6-8882-1d702c2ffc8b",
+                  "headInsuree": {
+                    "chfId": "070707070",
+                    "lastName": "Macintyre",
+                    "otherNames": "Joseph",
+                    "dob": "1950-07-12"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

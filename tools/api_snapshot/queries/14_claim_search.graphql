@@ -1,0 +1,26 @@
+# Screen: Claims: health facility claims list (default filter: status Entered, newest first)
+# Source: openimis-fe-claim_js@develop src/actions.js fetchClaimSummaries; filters from src/pages/HealthFacilitiesPage.jsx (default status: 2) and src/components/ClaimSearcher.jsx (defaultOrderBy -dateClaimed, page size 10)
+query GetClaims {
+  claims(status: 2, orderBy: ["-dateClaimed"], first: 10) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        uuid
+        code
+        jsonExt
+        dateClaimed
+        dateProcessed
+        feedbackStatus
+        reviewStatus
+        claimed
+        approved
+        status
+        restoreId
+        healthFacility { id uuid name code }
+        insuree{id,uuid,chfId,lastName,otherNames,dob}
+        preAuthorization
+      }
+    }
+  }
+}

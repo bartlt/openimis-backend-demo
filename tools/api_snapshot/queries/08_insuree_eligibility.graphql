@@ -1,0 +1,9 @@
+# Screen: Insuree enquiry: remaining benefits (eligibility)
+# Source: openimis-fe-policy_js@develop src/actions.js fetchEligibility
+query {
+  policyEligibilityByInsuree(chfId:"070707070") {
+    prodId,
+    totalAdmissionsLeft, totalVisitsLeft, totalConsultationsLeft, totalSurgeriesLeft, totalDeliveriesLeft, totalAntenatalLeft,
+    consultationAmountLeft, surgeryAmountLeft, deliveryAmountLeft, hospitalizationAmountLeft, antenatalAmountLeft
+  }
+}

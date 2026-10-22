@@ -1,0 +1,22 @@
+# Screen: Medical services: search list (first page, sorted by code)
+# Source: openimis-fe-medical_js@develop src/actions.js fetchMedicalServicesSummaries; filters from src/components/MedicalServiceSearcher.jsx (defaultOrderBy code, page size 10)
+query GetMedicalServices {
+  medicalServices(first: 10, orderBy: ["code"]) {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        uuid
+        code
+        name
+        packagetype
+        type
+        price
+        maximumAmount
+        validityFrom
+        validityTo
+        level
+      }
+    }
+  }
+}

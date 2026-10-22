@@ -1,0 +1,168 @@
+{
+  "query": "16_contribution_search",
+  "screen": "Contributions: search list (first page, newest payment first)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "premiums": {
+        "totalCount": 21,
+        "pageInfo": {
+          "hasNextPage": true,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjk="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6Mg==",
+              "uuid": "cfabd7c3-562a-4690-ab03-7d13ba9bbdf4",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE184",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": null
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6Mw==",
+              "uuid": "741950db-5b93-467e-9bfa-8fc7dde8d1f0",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE3423",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": null
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6NA==",
+              "uuid": "6307c8cd-5c31-478a-a984-13579ae19511",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RF231",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": null
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6NQ==",
+              "uuid": "9d29f620-7ec8-461f-85de-94a57dfa5fa8",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE453",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": null
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6Ng==",
+              "uuid": "c88d3edb-535f-4589-8908-ad2370b014c2",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE9237",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": null
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6Nw==",
+              "uuid": "9f846c92-aeb4-40b8-8660-98d197f13c0e",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE6283",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": {
+                "id": "UGF5ZXJHUUxUeXBlOjE=",
+                "uuid": "23602095-e132-4d4d-ac77-a64508323273",
+                "name": "Coffee Farmers Association"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6OA==",
+              "uuid": "f0a6f948-f7d7-4b13-9a88-a7433dc9d39b",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE259",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": {
+                "id": "UGF5ZXJHUUxUeXBlOjE=",
+                "uuid": "23602095-e132-4d4d-ac77-a64508323273",
+                "name": "Coffee Farmers Association"
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6OQ==",
+              "uuid": "71294e1c-6263-41aa-9882-c6d0cc46a0be",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE8973",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": null
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6MTA=",
+              "uuid": "4d441358-9dd9-4b30-a8e8-462bf62f31bd",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE8163",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": null
+            }
+          },
+          {
+            "node": {
+              "id": "UHJlbWl1bUdRTFR5cGU6MQ==",
+              "uuid": "69d36591-5030-4bc2-851f-6318527a4595",
+              "payDate": "2019-08-20",
+              "amount": "10000.00",
+              "payType": "C",
+              "receipt": "RE36",
+              "isPhotoFee": false,
+              "clientMutationId": null,
+              "validityTo": null,
+              "payer": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "query": "20_location_regions",
+  "screen": "Locations: regions",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "locations": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjE="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+              "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+              "type": "R",
+              "code": "R1",
+              "name": "Region 1",
+              "malePopulation": null,
+              "femalePopulation": null,
+              "otherPopulation": null,
+              "families": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "TG9jYXRpb25HUUxUeXBlOjE4",
+              "uuid": "68753566-9d2e-4cec-936e-4c6bf1968c0d",
+              "type": "R",
+              "code": "R2",
+              "name": "Tahida",
+              "malePopulation": null,
+              "femalePopulation": null,
+              "otherPopulation": null,
+              "families": null,
+              "clientMutationId": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

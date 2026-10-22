@@ -1,0 +1,7 @@
+# Screen: Login / permissions: module permission catalogue loaded at start-up
+# Source: openimis-fe-core_js@develop src/actions.jsx fetchModulesPermissions
+query GetModulesPermissions {
+  modulesPermissions {
+    modulePermsList{moduleName, permissions{permsName, permsValue}}
+  }
+}

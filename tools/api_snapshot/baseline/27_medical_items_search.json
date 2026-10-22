@@ -1,0 +1,160 @@
+{
+  "query": "27_medical_items_search",
+  "screen": "Medical items: search list (first page, sorted by code)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "medicalItems": {
+        "totalCount": 257,
+        "pageInfo": {
+          "hasNextPage": true,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjk="
+        },
+        "edges": [
+          {
+            "node": {
+              "uuid": "71efb78b-64ee-4a68-be29-87daf566eb20",
+              "code": "0001",
+              "name": "ACETYLSALICYLIC ACID (ASPIRIN)  TABS 300MG",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "10.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "1000 TABLETS"
+            }
+          },
+          {
+            "node": {
+              "uuid": "66abfdf1-e537-4362-a435-cb15ab14f644",
+              "code": "0002",
+              "name": "ADRENALINE 1ML INJ 1MG/ML",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "1000.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "10 VIALS"
+            }
+          },
+          {
+            "node": {
+              "uuid": "3fb311f0-de5c-4897-8089-59645ea2dae2",
+              "code": "0003",
+              "name": "AIRWAY GUEDEL RUBBER CHILD SIZE 67 MM",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "3620.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "10 PIECES"
+            }
+          },
+          {
+            "node": {
+              "uuid": "c971d0d3-1bd3-4063-98d3-7f56d0bd06f6",
+              "code": "0004",
+              "name": "AIRWAY GUEDEL RUBBER INFANT SIZE 54 MM",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "4590.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "10 PIECES"
+            }
+          },
+          {
+            "node": {
+              "uuid": "1297627a-e45c-4f78-84bd-15c4981b770b",
+              "code": "0005",
+              "name": "AIRWAY GUEDEL RUBBER SMALL ADULT SIZE 82 MM",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "4590.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "10 PIECES"
+            }
+          },
+          {
+            "node": {
+              "uuid": "8b288d92-3bb9-49cf-9900-980b724b0f70",
+              "code": "0006",
+              "name": "ALBENDAZOLE TABS 200 MG",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "25.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "100 TABLETS"
+            }
+          },
+          {
+            "node": {
+              "uuid": "b7f4379c-9fa5-437b-b1a9-2606b5c102f7",
+              "code": "0007",
+              "name": "ALLOPURINOL TABS 100 MG",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "160.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "100 TABLETS"
+            }
+          },
+          {
+            "node": {
+              "uuid": "24518593-7488-4f46-8e72-f2c78fe7d3a2",
+              "code": "0008",
+              "name": "AMINOPHYLLINE  TABS 100 MG",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "10.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "1000 TABLETS"
+            }
+          },
+          {
+            "node": {
+              "uuid": "82cfff93-cef2-40ba-b706-b3a7366ce3f7",
+              "code": "0009",
+              "name": "AMINOPHYLLINE 10ML INJ 25MG/ML",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "290.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "10 VIALS"
+            }
+          },
+          {
+            "node": {
+              "uuid": "ce66c280-2302-4265-8a9e-ca09520d0ca4",
+              "code": "0010",
+              "name": "AMITRYPTILINE TABS 25 MG",
+              "type": "D",
+              "quantity": null,
+              "maximumAmount": null,
+              "price": "80.00",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "package": "500 TABLETS"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

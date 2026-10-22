@@ -1,0 +1,160 @@
+{
+  "query": "28_medical_services_search",
+  "screen": "Medical services: search list (first page, sorted by code)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "medicalServices": {
+        "totalCount": 81,
+        "pageInfo": {
+          "hasNextPage": true,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjk="
+        },
+        "edges": [
+          {
+            "node": {
+              "uuid": "488d8bcb-5b88-438c-9077-f177f6f32626",
+              "code": "A1",
+              "name": "General Consultation",
+              "packagetype": "S",
+              "type": "P",
+              "price": "400.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "S"
+            }
+          },
+          {
+            "node": {
+              "uuid": "ecb33ba9-c330-4c03-92ab-42bbc917c831",
+              "code": "G1",
+              "name": "DEN Intermaxillary Fixation",
+              "packagetype": "S",
+              "type": "C",
+              "price": "42000.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "H"
+            }
+          },
+          {
+            "node": {
+              "uuid": "85fd5586-8e1d-4e1d-9bdb-d80469354611",
+              "code": "G100",
+              "name": "SUR Burst Abdomen",
+              "packagetype": "S",
+              "type": "C",
+              "price": "42000.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "H"
+            }
+          },
+          {
+            "node": {
+              "uuid": "639fd0f9-d860-487b-8ec0-c7be0d2e2b94",
+              "code": "G2",
+              "name": "DEN Cleft Lip & Palate Repair",
+              "packagetype": "S",
+              "type": "C",
+              "price": "42000.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "H"
+            }
+          },
+          {
+            "node": {
+              "uuid": "b9b73510-fec5-4de0-9163-b1ee5a416920",
+              "code": "G34",
+              "name": "OBG Caesarean Section Delivery",
+              "packagetype": "S",
+              "type": "C",
+              "price": "42000.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "H"
+            }
+          },
+          {
+            "node": {
+              "uuid": "c265afb2-59ea-4774-b291-510d94a55b0f",
+              "code": "G60",
+              "name": "SUR Gastrostomy",
+              "packagetype": "S",
+              "type": "C",
+              "price": "42000.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "D"
+            }
+          },
+          {
+            "node": {
+              "uuid": "e300da5e-bc54-4fc2-8eb7-406ea6ce224c",
+              "code": "I1",
+              "name": " BLOOD SUGAR- RANDOM OR FASTING",
+              "packagetype": "S",
+              "type": "P",
+              "price": "1300.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "S"
+            }
+          },
+          {
+            "node": {
+              "uuid": "e437f7e6-fbe4-40f5-aa1b-13c0b32d6ca9",
+              "code": "I113",
+              "name": "BLOOD SUGAR-RANDOM OR FASTING",
+              "packagetype": "S",
+              "type": "P",
+              "price": "1250.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "S"
+            }
+          },
+          {
+            "node": {
+              "uuid": "73f8f57c-42a7-40f2-b5e6-50f8b9aa6aca",
+              "code": "I117",
+              "name": "BLOOD SLIDE FOR MALARIAL PARASITES (BS FOR MPS)",
+              "packagetype": "S",
+              "type": "C",
+              "price": "650.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "S"
+            }
+          },
+          {
+            "node": {
+              "uuid": "94ccd361-0d4a-4808-9c8e-5fa57b18d36d",
+              "code": "I125",
+              "name": "URINE ANALYSIS (ROUTINE)",
+              "packagetype": "S",
+              "type": "C",
+              "price": "650.00",
+              "maximumAmount": null,
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "level": "S"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

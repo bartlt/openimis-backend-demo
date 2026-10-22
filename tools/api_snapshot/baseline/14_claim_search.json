@@ -1,0 +1,110 @@
+{
+  "query": "14_claim_search",
+  "screen": "Claims: health facility claims list (default filter: status Entered, newest first)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "claims": {
+        "totalCount": 3,
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjI="
+        },
+        "edges": [
+          {
+            "node": {
+              "uuid": "96c604a1-4d71-4c37-bd5a-867595863102",
+              "code": "CID00001",
+              "jsonExt": null,
+              "dateClaimed": "2019-02-03",
+              "dateProcessed": null,
+              "feedbackStatus": 1,
+              "reviewStatus": 1,
+              "claimed": "1670.00",
+              "approved": null,
+              "status": 2,
+              "restoreId": null,
+              "healthFacility": {
+                "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjE4",
+                "uuid": "5c08e764-04ed-42a0-bbea-fe0ea4c08a3f",
+                "name": "Viru Dispensary",
+                "code": "VIDS001"
+              },
+              "insuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6NDc=",
+                "uuid": "42584440-2c16-46b6-9092-b8d3f439d6ba",
+                "chfId": "105000002",
+                "lastName": "Ilina",
+                "otherNames": "Doni",
+                "dob": "1993-06-09"
+              },
+              "preAuthorization": false
+            }
+          },
+          {
+            "node": {
+              "uuid": "db144ab6-4ff7-4a0f-837f-4f2a952807b0",
+              "code": "CIG00001",
+              "jsonExt": null,
+              "dateClaimed": "2019-01-24",
+              "dateProcessed": null,
+              "feedbackStatus": 1,
+              "reviewStatus": 1,
+              "claimed": "2870.00",
+              "approved": null,
+              "status": 2,
+              "restoreId": null,
+              "healthFacility": {
+                "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjY=",
+                "uuid": "05c0d312-7cf2-4e21-8004-a78eec008f5a",
+                "name": "Vida District Hospital",
+                "code": "VIHOS001"
+              },
+              "insuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6NDU=",
+                "uuid": "08037c23-5958-4cb3-9dfd-7adafb4e16e4",
+                "chfId": "10500001",
+                "lastName": "Ilina",
+                "otherNames": "Ethu",
+                "dob": "1988-07-10"
+              },
+              "preAuthorization": false
+            }
+          },
+          {
+            "node": {
+              "uuid": "46956275-cde7-4ba9-bc66-dc20c58692da",
+              "code": "CIB00001",
+              "jsonExt": null,
+              "dateClaimed": "2019-01-22",
+              "dateProcessed": null,
+              "feedbackStatus": 1,
+              "reviewStatus": 1,
+              "claimed": "1000.00",
+              "approved": null,
+              "status": 2,
+              "restoreId": null,
+              "healthFacility": {
+                "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjEx",
+                "uuid": "bc1da96c-ad55-4978-9dca-59335adc7469",
+                "name": "Juilöa Health Centre",
+                "code": "VIHC001"
+              },
+              "insuree": {
+                "id": "SW5zdXJlZUdRTFR5cGU6NDc=",
+                "uuid": "42584440-2c16-46b6-9092-b8d3f439d6ba",
+                "chfId": "105000002",
+                "lastName": "Ilina",
+                "otherNames": "Doni",
+                "dob": "1993-06-09"
+              },
+              "preAuthorization": false
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+# Screen: Insuree enquiry: policies of the insuree
+# Source: openimis-fe-policy_js@develop src/actions.js fetchFamilyOrInsureePolicies (chfId filter -> policiesByInsuree); called from src/components/InsureePolicyEligibilitySummary.jsx
+query GetPoliciesByInsuree {
+  policiesByInsuree(chfId:"070707070") {
+    totalCount
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        policyUuid
+        productCode
+        productName
+        officerCode
+        officerName
+        enrollDate
+        effectiveDate
+        startDate
+        expiryDate
+        status
+        policyValue
+        balance
+        ded
+        dedInPatient
+        dedOutPatient
+        ceiling
+        ceilingInPatient
+        ceilingOutPatient
+      }
+    }
+  }
+}

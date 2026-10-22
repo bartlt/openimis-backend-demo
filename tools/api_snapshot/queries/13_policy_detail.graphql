@@ -1,0 +1,26 @@
+# Screen: Policies: policy detail page
+# Source: openimis-fe-policy_js@develop src/actions.js fetchPolicyFull
+query GetPolicies {
+  policies(uuid: "a3df066b-3e23-429a-92ad-cd1ef46daa2f", showHistory: true) {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        uuid
+        product{id,code,name,location{id}}
+        officer{id,uuid,code,lastName,otherNames}
+        family{id,uuid,headInsuree{id chfId uuid lastName otherNames},location{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}}}
+        enrollDate
+        effectiveDate
+        startDate
+        expiryDate
+        stage
+        status
+        value
+        sumPremiums
+        claimDedRems{edges { node {dedG dedIp dedOp remG remIp remOp} } }
+        validityFrom
+        validityTo
+      }
+    }
+  }
+}

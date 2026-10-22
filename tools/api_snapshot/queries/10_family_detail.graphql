@@ -1,0 +1,24 @@
+# Screen: Families: family detail page
+# Source: openimis-fe-insuree_js@develop src/actions.js fetchFamily (FAMILY_FULL_PROJECTION)
+query GetFamilies {
+  families(uuid: "822a8e55-2290-4df6-8882-1d702c2ffc8b", showHistory: true) {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        poverty
+        confirmationNo
+        parent{id, uuid}
+        confirmationType{code, isConfirmationNumberRequired}
+        familyType{code}
+        address
+        validityFrom
+        validityTo
+        headInsuree{id,uuid,chfId,lastName,otherNames,dob,age,validityFrom,validityTo,photo{id,uuid,date,folder,filename,officerId,photo},gender{code, gender},education{id},profession{id},marital,cardIssued,currentVillage{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}},currentAddress,typeOfId{code},passport,relationship{id},head,status,statusDate,statusReason{code,insureeStatusReason},email,phone,healthFacility{id,uuid,code,name,level,servicesPricelist{id, uuid},itemsPricelist{id, uuid},contractStartDate,contractEndDate,location{id,uuid,code,name,type, parent{id,uuid,code,name,type}}}}
+        location{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type,parent{id,uuid,code,name,type}}}}
+        clientMutationId
+      }
+    }
+  }
+}

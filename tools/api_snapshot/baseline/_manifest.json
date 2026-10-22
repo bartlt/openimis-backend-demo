@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-22T15:43:05+00:00",
+  "git": {
+    "commit": "035df915",
+    "ref": "tags/baseline-django42-green"
+  },
+  "versions": {
+    "Django": "4.2.30",
+    "graphene": "2.1.9",
+    "graphene-django": "2.16.0"
+  },
+  "python": "3.11.17",
+  "user": "Admin",
+  "queries": 30,
+  "failed": [],
+  "timings_seconds": {
+    "django_setup": 1.36,
+    "login": 1.53,
+    "queries": 1.39,
+    "total": 4.28
+  }
+}

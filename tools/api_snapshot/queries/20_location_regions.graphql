@@ -1,0 +1,21 @@
+# Screen: Locations: regions
+# Source: openimis-fe-location_js@develop src/actions.js fetchLocations (type R)
+query GetLocations {
+  locations(type: "R", orderBy: "code") {
+    pageInfo { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    edges {
+      node {
+        id
+        uuid
+        type
+        code
+        name
+        malePopulation
+        femalePopulation
+        otherPopulation
+        families
+        clientMutationId
+      }
+    }
+  }
+}

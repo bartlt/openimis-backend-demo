@@ -1,0 +1,710 @@
+{
+  "query": "12_policy_search",
+  "screen": "Policies: search list (first page, newest enrolment first)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "policies": {
+        "totalCount": 21,
+        "pageInfo": {
+          "hasNextPage": true,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjk="
+        },
+        "edges": [
+          {
+            "node": {
+              "uuid": "a3df066b-3e23-429a-92ad-cd1ef46daa2f",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6MQ==",
+                "uuid": "4da8cbbb-8bd6-4e49-b25d-a34a76d4ce99",
+                "code": "E00005",
+                "lastName": "sri",
+                "otherNames": "sid"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZTox",
+                "uuid": "822a8e55-2290-4df6-8882-1d702c2ffc8b",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MQ==",
+                  "chfId": "070707070",
+                  "uuid": "0539afeb-21a1-4b3f-9478-23e6f41b0024",
+                  "lastName": "Macintyre",
+                  "otherNames": "Joseph"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                  "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                  "code": "R1D1M1V1",
+                  "name": "Rachla",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T08:33:51.577000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "3bddc83f-ae4a-45ff-a940-d25fb19a7a05",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6MQ==",
+                "uuid": "4da8cbbb-8bd6-4e49-b25d-a34a76d4ce99",
+                "code": "E00005",
+                "lastName": "sri",
+                "otherNames": "sid"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZToy",
+                "uuid": "c8e83c86-5868-479a-8c30-b41d16c77cc3",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6Ng==",
+                  "chfId": "111111119",
+                  "uuid": "1e94a0cf-75ab-4d1b-a76a-d5cace35835f",
+                  "lastName": "Manth",
+                  "otherNames": "Roger"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                  "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                  "code": "R1D1M1V1",
+                  "name": "Rachla",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T08:42:34.570000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "f31aba41-f5a8-4fd9-b77d-b6c0b0f97946",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6Ng==",
+                "uuid": "9c12ceb9-968e-4752-94d9-7420c7bd580f",
+                "code": "E00002",
+                "lastName": "Jack",
+                "otherNames": "Raga"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZTo0",
+                "uuid": "f6a0b402-0dc0-436e-a7bb-ec65dd4f011f",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MTI=",
+                  "chfId": "100000001",
+                  "uuid": "8572a782-2fde-44e7-af10-a5351ebf13bd",
+                  "lastName": "Yellow",
+                  "otherNames": "James"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYw",
+                  "uuid": "d7c17b9f-c508-4b92-b308-4c3727a5ada0",
+                  "code": "R1D2M1V2",
+                  "name": "Octo",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU3",
+                    "uuid": "4cf9a26d-6cb9-48cc-b42b-55ef61a9d0f2",
+                    "code": "R1D2M1",
+                    "name": "Actoloby",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                      "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                      "code": "R1D2",
+                      "name": "Jambero",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T08:49:23.787000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "37272dd4-a161-45ce-a9e5-0e7242976c37",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6Mw==",
+                "uuid": "671ef662-cd56-4740-8d2d-55cb4f451418",
+                "code": "E00001",
+                "lastName": "Roberts",
+                "otherNames": "Jeb"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZTo1",
+                "uuid": "c0489ff1-ddd9-442d-ad3b-ba6c59ac60cf",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MTM=",
+                  "chfId": "110000001",
+                  "uuid": "a4b00fdf-f978-4b64-8337-599358f96e1e",
+                  "lastName": "Ramula",
+                  "otherNames": "Agenio"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjU5",
+                  "uuid": "ca5ec00f-eaa3-4af8-ac11-7bc5abb3341b",
+                  "code": "R1D2M1V1",
+                  "name": "Holobo",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU3",
+                    "uuid": "4cf9a26d-6cb9-48cc-b42b-55ef61a9d0f2",
+                    "code": "R1D2M1",
+                    "name": "Actoloby",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                      "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                      "code": "R1D2",
+                      "name": "Jambero",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T08:51:12.987000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "3608f21b-0720-43d9-bb92-0d27ec1b59e9",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6Nw==",
+                "uuid": "ceab7e5e-6335-41ec-a454-8e1dc644170e",
+                "code": "E00003",
+                "lastName": "Jono",
+                "otherNames": "Jombo"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZTo2",
+                "uuid": "a8e4ded0-eab3-47d5-bdc6-daeeea76f9fc",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MTQ=",
+                  "chfId": "120000001",
+                  "uuid": "cfff1594-a9b7-46a8-a253-8ead814d7e9d",
+                  "lastName": "Badman",
+                  "otherNames": "Bolo"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYx",
+                  "uuid": "d862b77c-0e83-484b-b337-3c7adb06c034",
+                  "code": "R1D2M1V3",
+                  "name": "Raberjab",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU3",
+                    "uuid": "4cf9a26d-6cb9-48cc-b42b-55ef61a9d0f2",
+                    "code": "R1D2M1",
+                    "name": "Actoloby",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                      "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                      "code": "R1D2",
+                      "name": "Jambero",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T08:51:58.760000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "1f4f4aa0-ff52-4cac-8e2a-14d8207b301c",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6Mjc=",
+                "uuid": "462fde35-2cac-4315-a670-142a18f0c4eb",
+                "code": "E00013",
+                "lastName": "Lambda",
+                "otherNames": "Bilo"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZTo3",
+                "uuid": "4f42a66b-10ba-41c7-9b44-0af6dccddd07",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MTg=",
+                  "chfId": "13000001",
+                  "uuid": "0df21cd3-dd98-4634-8942-5d566e6ec111",
+                  "lastName": "Bonjorna",
+                  "otherNames": "Jono"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYy",
+                  "uuid": "b29ccc93-779d-459c-942c-df0b98b22ebb",
+                  "code": "R1D2M2V1",
+                  "name": "Agilo",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU4",
+                    "uuid": "cac524c0-1bac-4c96-9376-9d0ee35eb0aa",
+                    "code": "R1D2M2",
+                    "name": "Remorlogy",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                      "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                      "code": "R1D2",
+                      "name": "Jambero",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T09:03:18.977000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "5f17014f-2694-4afe-8971-1caa4cf49919",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6Mjc=",
+                "uuid": "462fde35-2cac-4315-a670-142a18f0c4eb",
+                "code": "E00013",
+                "lastName": "Lambda",
+                "otherNames": "Bilo"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZTo4",
+                "uuid": "7604e094-430a-4b0b-a498-76c1307f2f01",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MTk=",
+                  "chfId": "140000001",
+                  "uuid": "619d324c-4495-4ec7-86ab-b7f5277027b1",
+                  "lastName": "Labunda",
+                  "otherNames": "Agy"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjYy",
+                  "uuid": "b29ccc93-779d-459c-942c-df0b98b22ebb",
+                  "code": "R1D2M2V1",
+                  "name": "Agilo",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjU4",
+                    "uuid": "cac524c0-1bac-4c96-9376-9d0ee35eb0aa",
+                    "code": "R1D2M2",
+                    "name": "Remorlogy",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                      "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                      "code": "R1D2",
+                      "name": "Jambero",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T09:03:39.027000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "23fb7f2e-5d7b-475d-b83c-c6afd682254e",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6OQ==",
+                "uuid": "2b38782c-e45e-4f20-b3c2-5d8eb1e188e5",
+                "code": "E00006",
+                "lastName": "Yabber",
+                "otherNames": "Uck"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZTo5",
+                "uuid": "2f1eeafd-98b8-4ea8-b8bf-688913ec5eb7",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MjM=",
+                  "chfId": "150000001",
+                  "uuid": "5b3f8592-6014-4dd2-924a-0cdc17830609",
+                  "lastName": "Lathuro",
+                  "otherNames": "Jono"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjUz",
+                  "uuid": "eba563de-13cb-4cea-9bdd-ecab9a4344c5",
+                  "code": "R1D1M1V3",
+                  "name": "Agdo",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T09:11:58.750000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "d1e2c353-ff86-4b81-9523-96229987bd1c",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6OQ==",
+                "uuid": "2b38782c-e45e-4f20-b3c2-5d8eb1e188e5",
+                "code": "E00006",
+                "lastName": "Yabber",
+                "otherNames": "Uck"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZToxMA==",
+                "uuid": "3d10113c-b8b1-4956-91bb-ea75feebed7e",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MjQ=",
+                  "chfId": "160000001",
+                  "uuid": "20df59b8-e34d-478a-96b0-6f0e35bf4468",
+                  "lastName": "Shan",
+                  "otherNames": "Xiao"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjUw",
+                  "uuid": "108a16ea-5d7d-4534-a7e5-ab82c474fa7f",
+                  "code": "R1D1M1V2",
+                  "name": "Darbu",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T09:15:07.267000",
+              "validityTo": null
+            }
+          },
+          {
+            "node": {
+              "uuid": "6a2a7a42-6f4e-443c-b85f-bb046716cf56",
+              "product": {
+                "id": "UHJvZHVjdEdRTFR5cGU6NA==",
+                "code": "BCUL0001",
+                "name": "Basic Cover Ultha",
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE="
+                }
+              },
+              "officer": {
+                "id": "T2ZmaWNlckdRTFR5cGU6MQ==",
+                "uuid": "4da8cbbb-8bd6-4e49-b25d-a34a76d4ce99",
+                "code": "E00005",
+                "lastName": "sri",
+                "otherNames": "sid"
+              },
+              "family": {
+                "id": "RmFtaWx5R1FMVHlwZToxMQ==",
+                "uuid": "953351f9-bd1f-499c-82ab-e837aefcada7",
+                "headInsuree": {
+                  "id": "SW5zdXJlZUdRTFR5cGU6MjU=",
+                  "chfId": "170000001",
+                  "uuid": "44d64808-bca1-4043-89b1-aa045dcc0b04",
+                  "lastName": "Barumida",
+                  "otherNames": "Filsen"
+                },
+                "location": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjM1",
+                  "uuid": "8ed4eb0d-61ae-4022-8b4c-3076a619f957",
+                  "code": "R1D1M1V1",
+                  "name": "Rachla",
+                  "type": "V",
+                  "parent": {
+                    "id": "TG9jYXRpb25HUUxUeXBlOjM0",
+                    "uuid": "e50da11b-3e50-483c-846b-0991c13c0935",
+                    "code": "R1D1M1",
+                    "name": "Achi",
+                    "type": "W",
+                    "parent": {
+                      "id": "TG9jYXRpb25HUUxUeXBlOjE3",
+                      "uuid": "5345ef14-12ab-4e98-a07c-1e08d7105df4",
+                      "code": "R1D1",
+                      "name": "District 1",
+                      "type": "D",
+                      "parent": {
+                        "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                        "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                        "code": "R1",
+                        "name": "Region 1",
+                        "type": "R"
+                      }
+                    }
+                  }
+                }
+              },
+              "enrollDate": "2019-08-20",
+              "effectiveDate": "2019-08-20",
+              "startDate": "2019-08-20",
+              "expiryDate": "2020-08-19",
+              "stage": "N",
+              "status": 2,
+              "value": "10000.00",
+              "sumPremiums": 10000.0,
+              "validityFrom": "2018-03-20T09:15:46.663000",
+              "validityTo": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

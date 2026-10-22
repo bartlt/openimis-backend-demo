@@ -1,0 +1,67 @@
+{
+  "query": "24_health_facility_detail",
+  "screen": "Health facilities: health facility detail page",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "healthFacilities": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjA="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjEy",
+              "uuid": "079e777b-b12b-4763-a646-3773e906f9d7",
+              "code": "JMDP001",
+              "accCode": "",
+              "name": "Huda Dispensary",
+              "careType": "O",
+              "address": "Jolywel road 675",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "level": "D",
+              "subLevel": null,
+              "location": {
+                "id": "TG9jYXRpb25HUUxUeXBlOjU1",
+                "uuid": "6ca4b45b-ac17-4ff4-954c-dc1294bc66d1",
+                "code": "R1D2",
+                "name": "Jambero",
+                "parent": {
+                  "id": "TG9jYXRpb25HUUxUeXBlOjE=",
+                  "uuid": "75250515-40d7-4c77-bafe-a2c65ffc5a72",
+                  "code": "R1",
+                  "name": "Region 1"
+                }
+              },
+              "servicesPricelist": {
+                "id": "U2VydmljZXNQcmljZWxpc3RHUUxUeXBlOjU=",
+                "uuid": "7715fae8-8228-4b2f-a8dd-3a3d3306bdff",
+                "name": "Ultha Govt. Dispensary List"
+              },
+              "itemsPricelist": {
+                "id": "SXRlbXNQcmljZWxpc3RHUUxUeXBlOjE=",
+                "uuid": "e67f942f-cfe9-498d-b6f3-0e9ec5cf8433",
+                "name": "Ultha Govt. Dispensary List"
+              },
+              "catchments": [],
+              "contractStartDate": null,
+              "contractEndDate": null,
+              "status": "AC",
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

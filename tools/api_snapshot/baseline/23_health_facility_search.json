@@ -1,0 +1,310 @@
+{
+  "query": "23_health_facility_search",
+  "screen": "Health facilities: search list (first page)",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "healthFacilities": {
+        "totalCount": 15,
+        "pageInfo": {
+          "hasNextPage": true,
+          "hasPreviousPage": false,
+          "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "endCursor": "YXJyYXljb25uZWN0aW9uOjk="
+        },
+        "edges": [
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjE=",
+              "uuid": "026e088a-fbd5-474e-8d42-069958a34127",
+              "code": "JMHOS001",
+              "accCode": "DL0002",
+              "name": "Jambero District Hospital",
+              "careType": "B",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "H",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R1D2",
+                "name": "Jambero",
+                "parent": {
+                  "code": "R1",
+                  "name": "Region 1"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjI=",
+              "uuid": "d8a25f21-f36a-4d4d-9e58-1db8ffbe7036",
+              "code": "RAHOS001",
+              "accCode": "",
+              "name": "Rapta District Hospital",
+              "careType": "B",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "H",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R1D1",
+                "name": "District 1",
+                "parent": {
+                  "code": "R1",
+                  "name": "Region 1"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjQ=",
+              "uuid": "e5131cc5-bcd6-460c-b6bb-54da3f2506f2",
+              "code": "UPHOS001",
+              "accCode": "",
+              "name": "Uptol District Hospital",
+              "careType": "B",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "H",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R1D3",
+                "name": "Uptol",
+                "parent": {
+                  "code": "R1",
+                  "name": "Region 1"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjU=",
+              "uuid": "1ebc4a36-d143-45eb-ab93-d7e973d8f14b",
+              "code": "ROHOS001",
+              "accCode": "",
+              "name": "Rajo District Hospital",
+              "careType": "B",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "H",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R2D1",
+                "name": "Rajo",
+                "parent": {
+                  "code": "R2",
+                  "name": "Tahida"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjY=",
+              "uuid": "05c0d312-7cf2-4e21-8004-a78eec008f5a",
+              "code": "VIHOS001",
+              "accCode": "",
+              "name": "Vida District Hospital",
+              "careType": "B",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "H",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R2D2",
+                "name": "Vida",
+                "parent": {
+                  "code": "R2",
+                  "name": "Tahida"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjc=",
+              "uuid": "7e0d15b9-aa6f-4e2e-9b69-0332f2d78a07",
+              "code": "JMHC001",
+              "accCode": "",
+              "name": "Jamini Health Centre",
+              "careType": "O",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "C",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R1D2",
+                "name": "Jambero",
+                "parent": {
+                  "code": "R1",
+                  "name": "Region 1"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjg=",
+              "uuid": "8403fe10-dc83-41a0-90a2-9fab63928275",
+              "code": "RAHC001",
+              "accCode": "",
+              "name": "Zuja Health Centre",
+              "careType": "O",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "C",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R1D1",
+                "name": "District 1",
+                "parent": {
+                  "code": "R1",
+                  "name": "Region 1"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjk=",
+              "uuid": "fb83cef0-d793-4574-a5e7-9481d7c4777a",
+              "code": "UPHC001",
+              "accCode": "",
+              "name": "Tzah Health Centre",
+              "careType": "O",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "C",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R1D3",
+                "name": "Uptol",
+                "parent": {
+                  "code": "R1",
+                  "name": "Region 1"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjEw",
+              "uuid": "0e095e81-9d5d-4b39-9ac7-91d22509bf06",
+              "code": "ROHC001",
+              "accCode": "",
+              "name": "Fulhui Health Centre",
+              "careType": "O",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "C",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R2D1",
+                "name": "Rajo",
+                "parent": {
+                  "code": "R2",
+                  "name": "Tahida"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          },
+          {
+            "node": {
+              "id": "SGVhbHRoRmFjaWxpdHlHUUxUeXBlOjEx",
+              "uuid": "bc1da96c-ad55-4978-9dca-59335adc7469",
+              "code": "VIHC001",
+              "accCode": "",
+              "name": "Juilöa Health Centre",
+              "careType": "O",
+              "phone": "",
+              "fax": "",
+              "email": "",
+              "level": "C",
+              "legalForm": {
+                "code": "G",
+                "legalForm": "Government"
+              },
+              "location": {
+                "code": "R2D2",
+                "name": "Vida",
+                "parent": {
+                  "code": "R2",
+                  "name": "Tahida"
+                }
+              },
+              "validityFrom": "2017-01-01T00:00:00",
+              "validityTo": null,
+              "clientMutationId": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

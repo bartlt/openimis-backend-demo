@@ -1,0 +1,89 @@
+# Screen: Products: search list (first page)
+# Source: openimis-fe-product_js@develop src/hooks.js useProductsQuery + GRAPHQL_USE_PRODUCT_PRODUCT_FRAGMENT; variables from src/components/ProductSearcher.jsx
+# Variables: {"first": 10}
+query (
+  $search: String, $first: Int, $last: Int, $before: String, $after: String, $code: String, $name: String,
+  $dateFrom: DateTime, $dateTo: DateTime, $location: Int, $showHistory: Boolean
+) {
+  products (
+    search: $search, first: $first, last: $last, before: $before, after: $after, code_Icontains: $code, showHistory: $showHistory,
+    name_Icontains: $name, dateFrom_Lte: $dateFrom, dateTo_Gte: $dateTo, location: $location
+  ) {
+    edges {
+      node {
+        ...ProductFragment
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+  }
+}
+fragment ProductFragment on ProductGQLType {
+  id
+  uuid
+  code
+  name
+  ageMaximal
+  ageMinimal
+  maxMembers
+  threshold
+  location {id uuid code name parent {id uuid name code}}
+  validityFrom
+  validityTo
+  dateFrom
+  dateTo
+  recurrence
+  insurancePeriod
+  lumpSum
+  premiumAdult
+  premiumChild
+  maxInstallments
+  registrationLumpSum
+  registrationFee
+  generalAssemblyLumpSum
+  generalAssemblyFee
+  startCycle1
+  startCycle2
+  startCycle3
+  startCycle4
+  renewalDiscountPerc
+  renewalDiscountPeriod
+  enrolmentDiscountPerc
+  enrolmentDiscountPeriod
+  ceilingInterpretation
+  gracePeriodEnrolment
+  gracePeriodRenewal
+  gracePeriodPayment
+  accCodePremiums
+  accCodeRemuneration
+  maxPolicyExtraMember
+  maxPolicyExtraMemberIp
+  maxPolicyExtraMemberOp
+  maxCeilingPolicy
+  maxCeilingPolicyIp
+  maxCeilingPolicyOp
+  maxNoConsultation
+  maxNoSurgery
+  maxNoDelivery
+  maxNoHospitalization
+  maxNoVisits
+  maxNoAntenatal
+  maxAmountConsultation
+  maxAmountSurgery
+  maxAmountDelivery
+  maxAmountHospitalization
+  maxAmountAntenatal
+  deductible
+  deductibleIp
+  deductibleOp
+  ceiling
+  ceilingIp
+  ceilingOp
+  conversionProduct { id name code }
+  administrationPeriod
+}
