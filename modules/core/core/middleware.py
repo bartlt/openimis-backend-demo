@@ -3,6 +3,8 @@ from django.utils.timezone import now
 from django_ratelimit.core import is_ratelimited
 from rest_framework.exceptions import JsonResponse
 from django.conf import settings
+from graphql_jwt.middleware import JSONWebTokenMiddleware
+from graphql_jwt.settings import jwt_settings
 
 
 logger = logging.getLogger(__name__)
@@ -86,3 +88,23 @@ class AdminLogoutMiddleware:
             logger.info("Cleared all sessions after admin panel logout")
 
         return response
+
+
+class CustomJSONWebTokenMiddleware(JSONWebTokenMiddleware):
+    """
+    django-graphql-jwt 0.4.0 caches "allow any" root fields by ``info.path[0]``.
+    With graphql-core 3, ``info.path`` is a linked ``Path`` whose index 0 is the
+    parent path (``None`` for every root field), so once an allow-any mutation
+    (e.g. tokenAuth) ran, every later request skipped JWT authentication.
+    Key the cache by the root field name, as with graphql-core 2.
+    """
+
+    def authenticate_context(self, info, **kwargs):
+        root_path = info.path.as_list()[0]
+
+        if root_path not in self.cached_allow_any:
+            if jwt_settings.JWT_ALLOW_ANY_HANDLER(info, **kwargs):
+                self.cached_allow_any.add(root_path)
+            else:
+                return True
+        return False

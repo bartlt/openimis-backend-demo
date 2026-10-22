@@ -268,8 +268,12 @@ GRAPHENE = {
     "SCHEMA": "openIMIS.schema.schema",
     "RELAY_CONNECTION_MAX_LIMIT": 100,
     "GRAPHIQL_HEADER_EDITOR_ENABLED": True,
+    # Keep graphene-django 2 enum type names (e.g. InsureeStatus, not
+    # InsureeInsureeStatusChoices) so the API used by the frontend is unchanged.
+    "DJANGO_CHOICE_FIELD_ENUM_V2_NAMING": True,
     "MIDDLEWARE": [
         "openIMIS.tracer.TracerMiddleware",
+        "openIMIS.schema.EnumValueMiddleware",
         "openIMIS.schema.GQLUserLanguageMiddleware",
         _RESOLVED_CORE["graphql_jwt_middleware"],
     ],

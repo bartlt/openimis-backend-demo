@@ -1,15 +1,13 @@
-from django.db import connection, transaction
-from django.http import HttpResponseNotAllowed, HttpResponse
-from django.http.response import HttpResponseBadRequest
+from django.http import HttpResponse
 from .dataloaders import get_dataloaders
 from . import tracer
-from graphql.execution import ExecutionResult
 
 from graphene_django.constants import MUTATION_ERRORS_FLAG
 from graphene_django.utils.utils import set_rollback
 from graphql_jwt.exceptions import JSONWebTokenError
-from graphene_django.settings import graphene_settings
 from graphene_django.views import GraphQLView as BaseGraphQLView, HttpError
+from graphql.pyutils import Path
+from graphql_sync_dataloaders import DeferredExecutionContext
 import logging
 
 logger = logging.getLogger(__name__)
@@ -22,7 +20,31 @@ def has_jwt_error(errors):
     return False
 
 
+def is_request_error(errors):
+    # Syntax/validation errors and errors raised outside resolvers carry no path:
+    # graphql-core 3's equivalent of graphql-core 2's `ExecutionResult.invalid`.
+    return any(not getattr(error, "path", None) for error in errors)
+
+
+class SyncDataLoaderExecutionContext(DeferredExecutionContext):
+    """
+    Lets the synchronous DataLoaders (core.dataloaders) batch their loads.
+
+    graphql-sync-dataloaders 0.1.1 calls ``handle_field_error(error, return_type)``,
+    but graphql-core >= 3.2.4 also expects the field ``path``; rebuild it from the
+    located error so field errors are collected instead of failing the request.
+    """
+
+    def handle_field_error(self, error, return_type, path=None):
+        if path is None:
+            for key in error.path or ():
+                path = Path(path, key, None)
+        return super().handle_field_error(error, return_type, path)
+
+
 class GraphQLView(BaseGraphQLView):
+    execution_context_class = SyncDataLoaderExecutionContext
+
     def json_encode(self, request, d, pretty=False):
         with tracer.trace(op="GraphQLView.json_encode"):
             return super().json_encode(request, d, pretty=pretty)
@@ -48,7 +70,7 @@ class GraphQLView(BaseGraphQLView):
                 ]
                 # status_code = 500 per spec GQL must return 200 even for error
 
-            if execution_result.invalid:
+            if execution_result.errors and is_request_error(execution_result.errors):
                 status_code = 400
             elif execution_result.errors and has_jwt_error(execution_result.errors):
                 status_code = 401
@@ -91,63 +113,10 @@ class GraphQLView(BaseGraphQLView):
                 "Unsupported Media Type: The server only accepts application/json requests.",
                 status=415,
             ))
-        if not query:
-            if show_graphiql:
-                return None
-            raise HttpError(HttpResponseBadRequest("Must provide query string."))
-
-        try:
-            backend = self.get_backend(request)
-            with tracer.trace(op="backend.document_from_string"):
-                document = backend.document_from_string(self.schema, query)
-        except Exception as e:
-            return ExecutionResult(errors=[e], invalid=True)
-
-        if request.method.lower() == "get":
-            operation_type = document.get_operation_type(operation_name)
-            if operation_type and operation_type != "query":
-                if show_graphiql:
-                    return None
-
-                raise HttpError(
-                    HttpResponseNotAllowed(
-                        ["POST"],
-                        "Can only perform a {} operation from a POST request.".format(
-                            operation_type
-                        ),
-                    )
-                )
-
-        try:
-            extra_options = {}
-            if self.executor:
-                # We only include it optionally since
-                # executor is not a valid argument in all backends
-                extra_options["executor"] = self.executor
-
-            options = {
-                "root_value": self.get_root_value(request),
-                "variable_values": variables,
-                "operation_name": operation_name,
-                "context_value": self.get_context(request),
-                "middleware": self.get_middleware(request),
-            }
-            options.update(extra_options)
-
-            operation_type = document.get_operation_type(operation_name)
-            if operation_type == "mutation" and (
-                graphene_settings.ATOMIC_MUTATIONS is True
-                or connection.settings_dict.get("ATOMIC_MUTATIONS", False) is True
-            ):
-                with transaction.atomic():
-                    result = document.execute(**options)
-                    if getattr(request, MUTATION_ERRORS_FLAG, False) is True:
-                        transaction.set_rollback(True)
-                return result
-            with tracer.trace(op="document.execute"):
-                return document.execute(**options)
-        except Exception as e:
-            return ExecutionResult(errors=[e], invalid=True)
+        with tracer.trace(op="document.execute"):
+            return super().execute_graphql_request(
+                request, data, query, variables, operation_name, show_graphiql
+            )
 
 
 class OpenIMISGraphQLView(GraphQLView):
