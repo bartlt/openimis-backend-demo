@@ -3,7 +3,7 @@ from contribution_plan.models import ContributionPlanBundle
 from django.conf import settings
 from django.db import models
 from core import models as core_models
-from graphql import ResolveInfo
+from graphql import GraphQLResolveInfo as ResolveInfo
 from location.models import Location, LocationManager
 from insuree.models import Insuree
 from policy.models import Policy

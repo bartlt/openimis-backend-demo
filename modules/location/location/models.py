@@ -9,7 +9,7 @@ from django.db.models.signals import post_save, post_delete
 
 from django.db.models.expressions import RawSQL
 from core import models as core_models
-from graphql import ResolveInfo
+from graphql import GraphQLResolveInfo as ResolveInfo
 from .apps import LocationConfig
 import logging
 from django.db.models import Q

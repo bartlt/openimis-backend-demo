@@ -7,6 +7,7 @@ import graphene
 from core.schema import OpenIMISMutation
 from django.contrib.auth.models import AnonymousUser
 from django.core.exceptions import ValidationError, PermissionDenied
+from decimal import Decimal as PyDecimal
 from graphene.types.decimal import Decimal
 from location.models import Location
 from .services import (
@@ -162,7 +163,7 @@ def create_or_update_product(user, data, is_duplicate=False):
 
 
 class RelativePricesInput(graphene.InputObjectType):
-    care_type = graphene.Field(CareTypeEnum)
+    care_type = graphene.InputField(CareTypeEnum)
     periods = graphene.NonNull(graphene.List(
         graphene.NonNull(graphene.Decimal)))
 
@@ -181,34 +182,34 @@ class CreateOrUpdateProductMutation(OpenIMISMutation):
 
 
 class ProductServiceOrItemInput(graphene.InputObjectType):
-    price_origin = graphene.Field(PriceOriginEnum)
-    limitation_type = graphene.Field(LimitTypeEnum)
-    limitation_type_r = graphene.Field(LimitTypeEnum)
-    limitation_type_e = graphene.Field(LimitTypeEnum)
+    price_origin = graphene.InputField(PriceOriginEnum)
+    limitation_type = graphene.InputField(LimitTypeEnum)
+    limitation_type_r = graphene.InputField(LimitTypeEnum)
+    limitation_type_e = graphene.InputField(LimitTypeEnum)
     waiting_period_adult = graphene.Int()
     waiting_period_child = graphene.Int()
     limit_no_adult = graphene.Int()
     limit_no_child = graphene.Int()
     limit_adult = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
     limit_child = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
     limit_adult_r = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
     limit_child_r = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
     limit_adult_e = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
     limit_child_e = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
-    ceiling_exclusion_adult = graphene.Field(CeilingExclusionEnum)
-    ceiling_exclusion_child = graphene.Field(CeilingExclusionEnum)
+    ceiling_exclusion_adult = graphene.InputField(CeilingExclusionEnum)
+    ceiling_exclusion_child = graphene.InputField(CeilingExclusionEnum)
 
 
 class ProductServiceInput(ProductServiceOrItemInput):
@@ -234,13 +235,13 @@ class ProductInputType(OpenIMISMutation.Input):
     acc_code_premiums = graphene.String()
 
     lump_sum = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
     premium_adult = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
     premium_child = graphene.Decimal(
-        max_digits=18, decimal_places=2, required=False, default_value=0
+        max_digits=18, decimal_places=2, required=False, default_value=PyDecimal(0)
     )
     threshold = graphene.Int()
     share_contribution = graphene.Decimal(
@@ -274,8 +275,8 @@ class ProductInputType(OpenIMISMutation.Input):
     enrolment_discount_period = graphene.Int(default_value=0)
 
     # Deductibles & Ceilings
-    ceiling_interpretation = graphene.Field(CeilingInterpretationEnum)
-    ceiling_type = graphene.Field(CeilingTypeEnum)
+    ceiling_interpretation = graphene.InputField(CeilingInterpretationEnum)
+    ceiling_type = graphene.InputField(CeilingTypeEnum)
 
     deductible = graphene.Decimal(max_digits=18, decimal_places=2)
     deductible_ip = graphene.Decimal(

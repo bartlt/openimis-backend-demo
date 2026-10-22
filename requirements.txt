@@ -5,22 +5,28 @@ psycopg2-binary
 cached-property
 coverage~=6.4.4
 celery>=4.4
-channels~=3.0.3
-channels-redis==3.2.0
-channels-rabbitmq==2.0.0
-django~=4.2.22
+channels~=4.3
+channels-redis~=4.3
+channels-rabbitmq~=4.0
+django~=5.2.18
 djangorestframework
-django-cryptography==1.1
-django-filter~=22.1
+# django-cryptography 1.1 (2022) imports django.utils.baseconv, removed in Django 5.0;
+# django-cryptography-5 is a maintained drop-in fork with the same `django_cryptography` package
+django-cryptography-5==2.0.3
+django-filter~=25.2
 #django-mssql-backend is a fork for django 3 of django-pyodbc-azure (django 2.1) which is a fork of django-pyodbc (1.x)
 # Since Q3 2021, Microsoft is providing an official driver mssql-django, the engine needs to become "mssql"
 #django-mssql-backend==2.8.1
-mssql-django~=1.4
+mssql-django~=1.8
 django-test-without-migrations
-graphene-django<3
-graphene-django-optimizer==0.8.0
+graphene~=3.4
+graphene-django~=3.2.3
+graphql-core~=3.2
+# Batching DataLoaders for synchronous graphql-core 3 execution (replaces promise.dataloader)
+graphql-sync-dataloaders==0.1.1
+graphene-django-optimizer==0.10.0
 PyJWT~=2.4.0
-django-graphql-jwt==0.3.4
+django-graphql-jwt==0.4.0
 markdown~=3.4.1
 nepalicalendar
 pyodbc
@@ -32,17 +38,18 @@ rules
 waitress
 wheel
 whitenoise
-django-health-check
+# 4.x drops the health_check.db/cache/storage apps listed in INSTALLED_APPS
+django-health-check~=3.24
 requests~=2.32.4
 apscheduler==3.10.1
 # As from v0.4, Django-apscheduler has a migration that is incompatible with SQL Server
 # (autoincrement int => bigint) so we are using our own fork with a squashed migration
 git+https://github.com/openimis/django-apscheduler.git@django-4.2#egg=django-apscheduler
 django-simple-history
-django-dirtyfields==1.4.1
-daphne==3.0.1
+django-dirtyfields~=1.9.9
+daphne~=4.2
 GitPython~=3.1.27
-drf-spectacular==0.25.1
+drf-spectacular==0.29.0
 django-cprofile-middleware==1.0.5
 # flake8 and django-nose are needed for sonar scan in backend modules
 flake8
@@ -52,12 +59,12 @@ nepali_datetime
 twisted>=23.10.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
 pillow>=10.2.0 # not directly required, pinned by Snyk to avoid a vulnerability
 
-django-redis==5.4.0
-django-opensearch-dsl==0.5.1
+django-redis==6.0.0
+django-opensearch-dsl==0.7.0
 
 zxcvbn~=4.4.28
 password-validator==1.0
-django-axes==6.4.0
+django-axes==7.1.0
 django-split-settings
 faker
 django-csp

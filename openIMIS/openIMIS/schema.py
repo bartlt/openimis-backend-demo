@@ -1,3 +1,5 @@
+from enum import Enum
+
 import graphene
 
 from core.models import Language
@@ -56,6 +58,36 @@ class Query(*queries, graphene.ObjectType):
 
 class Mutation(*mutations, graphene.ObjectType):
     pass
+
+
+def _enum_members_to_values(value):
+    if isinstance(value, Enum):
+        return value.value
+    if isinstance(value, list):
+        return [_enum_members_to_values(item) for item in value]
+    if isinstance(value, dict):
+        # dict.items(): graphene input containers expose each field as an attribute,
+        # so an input field named "items" shadows the dict method.
+        for key, item in dict.items(value):
+            converted = _enum_members_to_values(item)
+            if converted is not item:
+                value[key] = converted
+                if hasattr(value, key):  # graphene InputObjectType container
+                    setattr(value, key, converted)
+    return value
+
+
+class EnumValueMiddleware:
+    """
+    Graphene 3 passes enum arguments to resolvers as Python Enum members; Graphene 2
+    passed their values (e.g. "INTERACTIVE", "I"). Restore the Graphene 2 behaviour so
+    module resolvers, mutation logs and services keep receiving plain values.
+    """
+
+    def resolve(self, next_middleware, root, info, **kwargs):
+        if kwargs:
+            kwargs = {k: _enum_members_to_values(v) for k, v in kwargs.items()}
+        return next_middleware(root, info, **kwargs)
 
 
 class GQLUserLanguageMiddleware:

@@ -12,7 +12,7 @@ from datetime import datetime as py_datetime
 
 from graphene_django import DjangoObjectType
 from functools import partial
-from promise import Promise
+from inspect import isawaitable
 
 from functools import reduce
 from django.utils.translation import gettext_lazy
@@ -136,8 +136,8 @@ class SmallInt(graphene.Int):
     parse_value = coerce_int
 
     @staticmethod
-    def parse_literal(ast):
-        result = graphene.Int.parse_literal(ast)
+    def parse_literal(ast, _variables=None):
+        result = graphene.Int.parse_literal(ast, _variables)
         if result is not None and MIN_SMALLINT <= result <= MAX_SMALLINT:
             return result
         else:
@@ -165,8 +165,8 @@ class TinyInt(graphene.Int):
     parse_value = coerce_int
 
     @staticmethod
-    def parse_literal(ast):
-        result = graphene.Int.parse_literal(ast)
+    def parse_literal(ast, _variables=None):
+        result = graphene.Int.parse_literal(ast, _variables)
         if result is not None and MIN_TINYINT <= result <= MAX_TINYINT:
             return result
         else:
@@ -198,9 +198,9 @@ class ParsedJSONString(graphene.JSONString):
         )
 
     @staticmethod
-    def parse_literal(node):
+    def parse_literal(node, _variables=None):
         return ParsedJSONString.parse_keys(
-            graphene.JSONString.parse_literal(node), to_snake_case
+            graphene.JSONString.parse_literal(node, _variables), to_snake_case
         )
 
     @staticmethod
@@ -256,6 +256,11 @@ for module in sys.modules:
     signal_mutation_module_after_mutating[module] = dispatch.Signal(
         _mutation_signal_params + ["error_messages"]
     )
+
+
+# Graphene 3 input types declare nested/enum fields as InputField (graphene.Field
+# is only valid on output types); treat both the same when coercing input data.
+_MOUNTED_FIELD_CLASSES = (graphene.types.field.Field, graphene.InputField)
 
 
 class OpenIMISMutation(graphene.relay.ClientIDMutation):
@@ -316,7 +321,7 @@ class OpenIMISMutation(graphene.relay.ClientIDMutation):
                         else:
                             coerced_list.append(item)
                     coerced_data[key] = coerced_list
-                elif field.__class__ == graphene.types.field.Field and isinstance(
+                elif field.__class__ in _MOUNTED_FIELD_CLASSES and isinstance(
                     field.type, graphene.types.enum.EnumMeta
                 ):
                     # If the field type is Enum
@@ -325,7 +330,7 @@ class OpenIMISMutation(graphene.relay.ClientIDMutation):
                     else:
                         coerced_data[key] = value
                 elif (
-                    field.__class__ == graphene.types.field.Field
+                    field.__class__ in _MOUNTED_FIELD_CLASSES
                     and isinstance(field.type, graphene.types.structures.NonNull)
                     and isinstance(field.type._of_type, graphene.types.enum.EnumMeta)
                 ):
@@ -336,7 +341,7 @@ class OpenIMISMutation(graphene.relay.ClientIDMutation):
                         )
                     else:
                         coerced_data[key] = value
-                elif field.__class__ == graphene.types.field.Field:
+                elif field.__class__ in _MOUNTED_FIELD_CLASSES:
                     coerced_data[key] = cls.coerce_mutation_data(
                         value, input_class=field._type
                     )
@@ -618,7 +623,7 @@ class OrderedDjangoFilterConnectionField(DjangoFilterConnectionField):
         if iterable is None:
             iterable = default_manager
         # thus the iterable gets refiltered by resolve_queryset
-        # but iterable might be promise
+        # but iterable might be awaitable
         iterable = queryset_resolver(connection, iterable, info, args)
         on_resolve = partial(
             cls.resolve_connection,
@@ -628,8 +633,11 @@ class OrderedDjangoFilterConnectionField(DjangoFilterConnectionField):
             user=info.context.user,
         )
 
-        if Promise.is_thenable(iterable):
-            return Promise.resolve(iterable).then(on_resolve)
+        if isawaitable(iterable):
+            async def resolve_connection_async():
+                return on_resolve(await iterable)
+
+            return resolve_connection_async()
 
         return on_resolve(iterable)
 

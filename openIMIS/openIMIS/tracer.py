@@ -30,7 +30,7 @@ def trace(*args, **kwargs):
 
 class TracerMiddleware:
     def resolve(self, next, root, info, **kwargs):
-        path = ".".join([str(x) for x in info.path])
+        path = ".".join([str(x) for x in info.path.as_list()])
         # Start tracing
         with trace(op="graphql.resolve") as span:
             span.set_tag("path", path)  
@@ -45,7 +45,10 @@ class TracerMiddleware:
                 
                 # Optionally add error information to the trace
                 span.set_tag("error", True)
-                span.log_kv({"exception": str(e), "traceback": traceback.format_exc()})
+                # set_data exists on both sentry spans and FakeSpan (log_kv exists on neither);
+                # with Graphene 2 this branch was unreachable because errors came back as
+                # rejected promises instead of being raised.
+                span.set_data("exception", {"exception": str(e), "traceback": traceback.format_exc()})
                 
                 # Re-raise the exception to allow GraphQL to handle it
                 raise e

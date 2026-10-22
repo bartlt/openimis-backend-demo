@@ -38,8 +38,7 @@ setup(
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Django",
-        "Framework :: Django :: 3.1",
-        "Framework :: Django :: 3.2",
+        "Framework :: Django :: 5.2",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: GNU Affero General Public License v3",
         "Operating System :: OS Independent",

@@ -166,8 +166,8 @@ class ClaimCodeInputType(graphene.String):
     parse_value = coerce_string
 
     @staticmethod
-    def parse_literal(ast):
-        result = graphene.String.parse_literal(ast)
+    def parse_literal(ast, _variables=None):
+        result = graphene.String.parse_literal(ast, _variables)
         assert_string_length(result, ClaimConfig.max_claim_length)
         return result
 
@@ -183,8 +183,8 @@ class ClaimGuaranteeIdInputType(graphene.String):
     parse_value = coerce_string
 
     @staticmethod
-    def parse_literal(ast):
-        result = graphene.String.parse_literal(ast)
+    def parse_literal(ast, _variables=None):
+        result = graphene.String.parse_literal(ast, _variables)
         assert_string_length(result, 50)
         return result
 
@@ -259,7 +259,7 @@ class ClaimInputType(OpenIMISMutation.Input):
     restore = graphene.UUID(required=False)
     feedback_available = graphene.Boolean(default=False)
     feedback_status = TinyInt(required=False)
-    feedback = graphene.Field(FeedbackInputType, required=False)
+    feedback = graphene.InputField(FeedbackInputType, required=False)
     care_type = graphene.String(required=False)
     pre_authorization = graphene.Boolean(required=False)
     patient_condition = graphene.String(required=False)
@@ -790,7 +790,7 @@ class DeliverClaimFeedbackMutation(OpenIMISMutation):
 
     class Input(OpenIMISMutation.Input):
         claim_uuid = graphene.String(required=False, read_only=True)
-        feedback = graphene.Field(FeedbackInputType, required=True)
+        feedback = graphene.InputField(FeedbackInputType, required=True)
 
     @classmethod
     def async_mutate(cls, user, **data):
