@@ -194,7 +194,7 @@ pre {{ background: #111827; color: #e5e7eb; padding: 1rem; border-radius: 8px; o
 footer {{ color: #6b7280; font-size: .85rem; }}
 </style></head><body>
 <div class="banner"><h1>{'✓' if ok else '✗'} {e(headline)}</h1>
-<p>The same real frontend queries were run against the old and the new backend on the same demo database.</p></div>
+<p>The same real frontend queries were run against the old and the new backend on the same database.</p></div>
 <div class="stats"><div class="stat"><b>{len(rows)}</b>queries</div><div class="stat"><b>{same}</b>identical</div>
 <div class="stat"><b>{diff}</b>different</div><div class="stat"><b>{values}</b>values compared</div></div>
 <div class="versions"><b>Before</b><span>{e(before_desc)}</span><b>After</b><span>{e(after_desc)}</span></div>

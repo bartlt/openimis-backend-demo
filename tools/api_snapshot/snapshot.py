@@ -57,8 +57,8 @@ def parse_args():
     p.add_argument("--repo", default=str(HERE.parent.parent),
                    help="openIMIS backend checkout to snapshot (default: the repo containing this script)")
     p.add_argument("--queries", default=str(DEFAULT_QUERIES), help="folder with *.graphql / *.rest files")
-    p.add_argument("--user", default="Admin", help="demo DB login (default: Admin)")
-    p.add_argument("--password", default="admin123", help="demo DB password (default: admin123)")
+    p.add_argument("--user", default="Admin", help="login (default: Admin)")
+    p.add_argument("--password", default="admin123", help="password (default: admin123)")
     p.add_argument("--verbose", action="store_true", help="show the backend's own log output")
     return p.parse_args()
 
