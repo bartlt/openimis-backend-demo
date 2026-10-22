@@ -1,0 +1,97 @@
+--- before
++++ after
+@@ -1818,5 +1818,5 @@
+   items: [ProductItemInput!]
+   locationUuid: UUID
+-  lumpSum: Decimal = 0
++  lumpSum: Decimal = "0"
+   maxAmountAntenatal: Decimal
+   maxAmountConsultation: Decimal
+@@ -1840,6 +1840,6 @@
+   mutationExtensions: ParsedJSONString
+   name: String!
+-  premiumAdult: Decimal = 0
+-  premiumChild: Decimal = 0
++  premiumAdult: Decimal = "0"
++  premiumChild: Decimal = "0"
+   recurrence: Int
+   registrationFee: Decimal
+@@ -2538,5 +2538,12 @@
+ 
+ type DjangoDebug {
++  exceptions: [DjangoDebugException]
+   sql: [DjangoDebugSQL]
++}
++
++type DjangoDebugException {
++  excType: String!
++  message: String!
++  stack: String!
+ }
+ 
+@@ -2589,5 +2596,5 @@
+   items: [ProductItemInput!]
+   locationUuid: UUID
+-  lumpSum: Decimal = 0
++  lumpSum: Decimal = "0"
+   maxAmountAntenatal: Decimal
+   maxAmountConsultation: Decimal
+@@ -2611,6 +2618,6 @@
+   mutationExtensions: ParsedJSONString
+   name: String!
+-  premiumAdult: Decimal = 0
+-  premiumChild: Decimal = 0
++  premiumAdult: Decimal = "0"
++  premiumChild: Decimal = "0"
+   recurrence: Int
+   registrationFee: Decimal
+@@ -4545,10 +4552,10 @@
+   ceilingExclusionChild: CeilingExclusionEnum
+   itemUuid: UUID!
+-  limitAdult: Decimal = 0
+-  limitAdultE: Decimal = 0
+-  limitAdultR: Decimal = 0
+-  limitChild: Decimal = 0
+-  limitChildE: Decimal = 0
+-  limitChildR: Decimal = 0
++  limitAdult: Decimal = "0"
++  limitAdultE: Decimal = "0"
++  limitAdultR: Decimal = "0"
++  limitChild: Decimal = "0"
++  limitChildE: Decimal = "0"
++  limitChildR: Decimal = "0"
+   limitNoAdult: Int
+   limitNoChild: Int
+@@ -4614,10 +4621,10 @@
+   ceilingExclusionAdult: CeilingExclusionEnum
+   ceilingExclusionChild: CeilingExclusionEnum
+-  limitAdult: Decimal = 0
+-  limitAdultE: Decimal = 0
+-  limitAdultR: Decimal = 0
+-  limitChild: Decimal = 0
+-  limitChildE: Decimal = 0
+-  limitChildR: Decimal = 0
++  limitAdult: Decimal = "0"
++  limitAdultE: Decimal = "0"
++  limitAdultR: Decimal = "0"
++  limitChild: Decimal = "0"
++  limitChildE: Decimal = "0"
++  limitChildR: Decimal = "0"
+   limitNoAdult: Int
+   limitNoChild: Int
+@@ -6038,5 +6045,5 @@
+   items: [ProductItemInput!]
+   locationUuid: UUID
+-  lumpSum: Decimal = 0
++  lumpSum: Decimal = "0"
+   maxAmountAntenatal: Decimal
+   maxAmountConsultation: Decimal
+@@ -6060,6 +6067,6 @@
+   mutationExtensions: ParsedJSONString
+   name: String!
+-  premiumAdult: Decimal = 0
+-  premiumChild: Decimal = 0
++  premiumAdult: Decimal = "0"
++  premiumChild: Decimal = "0"
+   recurrence: Int
+   registrationFee: Decimal
