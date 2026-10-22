@@ -42,12 +42,13 @@ ENV_DEFAULTS = {
 }
 
 # Normalization rules (the only changes made to responses before they are written):
-#   1. Values of these keys are replaced by "<volatile>" wherever they appear: they are login
-#      tokens or expiry times computed from "now", so they differ on every run by design.
+#   1. Values of these keys are replaced by "<volatile>" wherever they appear: login tokens,
+#      expiry times computed from "now", and `age`, which the API computes from today's date
+#      (it would otherwise break the committed baseline on every insuree's birthday).
 #   2. Nothing else is touched. Lists keep the order returned by the API and values are not
 #      rounded or reformatted.
 VOLATILE_KEYS = {"token", "refreshToken", "refresh_token", "csrfToken", "refreshExpiresIn",
-                 "last_login", "lastLogin"}
+                 "last_login", "lastLogin", "age"}
 VOLATILE = "<volatile>"
 
 
